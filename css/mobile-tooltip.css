@@ -1,0 +1,41 @@
+.glossary-tooltip-content-mobile {
+	background: #bbb;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	margin: 14px 0 10px;
+	display:none;
+	width:100%;
+}
+.glossary-mobile .glossary-show-tooltip {
+	display:block !important;
+	visibility:visible !important;
+	top:unset;
+}
+.glossary-tooltip-content-mobile.glossary-show-tooltip .close {
+	width:30px;
+	height:30px;
+	float:right;
+	font-weight:bold;
+	top: -14px;
+	right: -24px;
+	position:relative;
+	font-size: 20px;
+	cursor:pointer;
+}
+.glossary-more-mobile {
+	display:none;
+}
+.rtl .glossary-tooltip-content-mobile {
+	text-align:right;
+}
+.rtl .glossary-tooltip-content-mobile .close {
+	right:0;
+	top:0;
+	float:left;
+}
+@media (max-width: 1024px) {
+	.glossary-more-mobile {
+		display:block !important;
+	}
+}
