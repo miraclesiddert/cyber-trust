@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC Education website using html, css & javascript</title>
+
+    <!-- iconscort -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- google fonts (montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style_1.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+
+
+    <!--  ======================BACKGROUND TEXTURE================================= -->
+    <style>
+        body {
+            background-image: url(./images/bg-texture.png);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="Header_wrapper" class="">
+
+        <header id="Header">
+            <div id="Action_bar">
+                <div class="container">
+                    <div class="column one">
+
+                        <ul class="contact_details" aria-label="contact details">
+                            <li class="slogan">Contact The Cyber Trust</li>
+                            <li class="phone phone-1"><i class="icon-phone" aria-label="phone"></i><a
+                                    href="tel:+44(0)7588290009">+44 (0)758 829 0009</a></li>
+                            <li class="mail"><i class="icon-mail-line" aria-label="mail"></i><a
+                                    href="mailto:hello@EkomIbiok@icould.com">hello@Ekomibiok</a></li>
+                        </ul>
+                        <ul class="social" role="navigation" aria-label="social menu">
+                            <li class="linkedin"><a target="_blank"
+                                    href="https://www.linkedin.com/" title="LinkedIn"
+                                    aria-label="LinkedIn icon"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header_placeholder"></div>
+
+            <div id="Top_bar" class="loading">
+
+                <nav class="container">
+                    <div class="column one">
+
+                        <div class="top_bar_left clearfix">
+                            <div class="logo">
+                                <a id="logo" href="index.html"
+                                    title="Outsourced Data Protection Officers GDPR and Data Protection Compliance"
+                                    data-height="60" data-padding="15"><img
+                                        class="logo-main scale-with-grid  lazyload " src="images/home-logo.png" alt="DPO Centre" />
+                                </a>
+                            </div>
+
+                            <div class="menu_wrapper">
+                                <a class="responsive-menu-toggle " href="#" aria-label="mobile menu"><i
+                                        class="icon-menu-fine" aria-hidden="true"></i></a>
+                                <nav id="menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+                                    <ul id="menu-mainmenu" class="menu menu-main">
+                                        <li id="menu-item-6187"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                            <a href="/services/"><span>Services</span></a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-25082"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                                    <a><span>Outsourced Data Protection Officers</span></a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-25079"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a
+                                                                href="/services/outsourced-dpo-services/"><span>UK
+                                                                    Outsourced Data Protection Officers</span></a>
+                                                        </li>
+                                                        <li id="menu-item-25080"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                            <a
+                                                                href="https://www.dpocentre.nl/diensten/uitbestede-fg-diensten/"><span>European
+                                                                    Outsourced Data Protection Officers</span></a>
+                                                        </li>
+                                                        <li id="menu-item-25081"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                            <a
+                                                                href="https://www.dpocentre.ca/services/outsourced-dpo-services/"><span>Canadian
+                                                                    Outsourced Data Privacy Officers</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li id="menu-item-20690"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/sector/data-protection-for-life-sciences/"><span>Data
+                                                            Protection for Life Sciences</span></a></li>
+                                                <li id="menu-item-12323"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/interim-data-protection-officer-services/"><span>Interim
+                                                            Data Protection Officers</span></a></li>
+                                                <li id="menu-item-16496"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/representation-services/"><span>GDPR
+                                                            EU &amp; UK Representatives</span></a></li>
+                                                <li id="menu-item-16535"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/consultancy-services/"><span>Consultancy</span></a>
+                                                </li>
+                                                <li id="menu-item-17198"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/dsar-response-service/"><span>DSAR
+                                                            Response Service</span></a></li>
+                                                <li id="menu-item-11131"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/data-protection-awareness-training-development/"><span>Training</span></a>
+                                                </li>
+                                                <li id="menu-item-9885"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/advice-line-service/"><span>Advice
+                                                            Line</span></a></li>
+                                                <li id="menu-item-20429"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/services/xai/"><span>AI
+                                                            Explainability</span></a></li>
+                                                <li id="menu-item-12337"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/caldicott-guardian/"><span>Caldicott
+                                                            Guardians</span></a></li>
+                                                <li id="menu-item-15456"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/services/dspt/"><span>DSPT
+                                                            Audit</span></a></li>
+                                                <li id="menu-item-17180"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/services/nis-representation/"><span>NIS
+                                                            Representation</span></a></li>
+                                                <li id="menu-item-10033"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/services/services-schools/"><span>Services
+                                                            for Schools</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-9904"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                            <a href="/sectors/"><span>Sectors</span></a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-9891"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/sector/finance-insurance/"><span>Finance
+                                                            &amp; Insurance</span></a></li>
+                                                <li id="menu-item-9892"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                    <a href="/sector/healthcare/"><span>Medical
+                                                            &amp; Healthcare</span></a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-20776"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom">
+                                                            <a
+                                                                href="/sector/data-protection-for-life-sciences/"><span>Data
+                                                                    Protection for Life Sciences</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li id="menu-item-9895"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/sector/software-technology/"><span>Software
+                                                            &amp; Technology</span></a></li>
+                                                <li id="menu-item-9894"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/sector/retail-ecommerce/"><span>Retail
+                                                            &amp; eCommerce</span></a></li>
+                                                <li id="menu-item-9890"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/sector/education/"><span>Data
+                                                            Protection for Education</span></a></li>
+                                                <li id="menu-item-9889"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                    <a href="/sector/charities/"><span>Charities
+                                                            &amp; not-for profit</span></a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-22779"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a href="/cc-fund/"><span>The
+                                                                    DPO Centre Charity and Community Fund</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-9906"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                            <a><span>About Us</span></a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-11154"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/about-us/"><span>About
+                                                            Us</span></a></li>
+                                                <li id="menu-item-7571"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/about-us/our-team/"><span>Our
+                                                            Team</span></a></li>
+                                                <li id="menu-item-25647"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/join-the-dpo-centre/"><span>*Join
+                                                            the Team*</span></a></li>
+                                                <li id="menu-item-23364"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/the-dpo-centre-academy/"><span>The
+                                                            DPO Centre DPO Academy</span></a></li>
+                                                <li id="menu-item-10102"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/news-from-the-dpo-centre/"><span>News</span></a>
+                                                </li>
+                                                <li id="menu-item-18340"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/media-centre/"><span>Media
+                                                            Centre</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-6465"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="/events/"><span>Events</span></a>
+                                        </li>
+                                        <li id="menu-item-5909"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="/blog/"><span>Blog</span></a></li>
+                                        <li id="menu-item-9908"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                            <a><span>Resources</span></a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-9907"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/case-studies/"><span>Case
+                                                            Studies</span></a></li>
+                                                <li id="menu-item-16423"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                                    <a href="/white-papers/"><span>White papers</span></a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-15661"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a href="/cctv-whitepaper/"><span>CCTV
+                                                                    White Paper</span></a></li>
+                                                        <li id="menu-item-14832"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a href="/dsar-whitepaper/"><span>DSAR
+                                                                    White Paper</span></a></li>
+                                                        <li id="menu-item-16971"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a href="/ropa-white-paper/"><span>RoPA
+                                                                    White Paper</span></a></li>
+                                                        <li id="menu-item-16460"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                            <a
+                                                                href="/complex-dsars-white-paper/"><span>Tackling
+                                                                    Complex DSARs White Paper</span></a></li>
+                                                    </ul>
+                                                </li>
+                                                <li id="menu-item-17760"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/resources/dpia/"><span>The
+                                                            DPIA Newsletter</span></a></li>
+                                                <li id="menu-item-25217"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/ls/"><span>Life Sciences
+                                                            Newsletter</span></a></li>
+                                                <li id="menu-item-22592"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/life-sciences-playbook/"><span>Life
+                                                            Sciences Playbook</span></a></li>
+                                                <li id="menu-item-9896"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/resources/gdpr-basics/"><span>GDPR
+                                                            Basics</span></a></li>
+                                                <li id="menu-item-9897"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/why-you-need-a-data-protection-officer/"><span>Do
+                                                            I Need a Data Protection Officer?</span></a></li>
+                                                <li id="menu-item-11108"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/benefits-of-outsourcing/"><span>Benefits
+                                                            of Outsourcing</span></a></li>
+                                                <li id="menu-item-9898"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/why-do-you-need-gdpr-representation/"><span>Why
+                                                            you need GDPR Representation</span></a></li>
+                                                <li id="menu-item-12538"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/resources/gdpr-toolkit/"><span>GDPR
+                                                            Policy Toolkit</span></a></li>
+                                                <li id="menu-item-23904"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/dpdi/"><span>UK DPDI Bill: An
+                                                            overview</span></a></li>
+                                                <li id="menu-item-15365"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a
+                                                        href="/resources/uk-data-protection-index/"><span>UK
+                                                            Data Protection Index</span></a></li>
+                                                <li id="menu-item-10754"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="/resources/gdpr/"><span>The
+                                                            Full GDPR Text</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="menu-item-5902"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="./About-page/about.html"><span>Contact
+                                                    us</span></a></li>
+                                        <li id="menu-item-25652"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="/join-the-dpo-centre/"><span>* Join
+                                                    Us *</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="secondary_menu_wrapper">
+                            </div>
+
+                            <div class="banner_wrapper">
+                            </div>
+
+                        </div>
+
+                        <div class="top_bar_right ">
+                            <div class="top_bar_right_wrapper"><a id="search_button"
+                                    class="top-bar-right-icon top-bar-right-icon-search search_button" href="#"><svg
+                                        width="26" viewBox="0 0 26 26" aria-label="search icon">
+                                        <defs>
+                                            <style>
+                                                .path {
+                                                    fill: none;
+                                                    stroke: #000;
+                                                    stroke-miterlimit: 10;
+                                                    stroke-width: 1.5px;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+                                        <line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+                                    </svg></a></div>
+                        </div>
+                        <div class="search_wrapper">
+
+                            <form method="get" class="form-searchform" action="index.html">
+
+
+                                <svg class="icon_search" width="26" viewBox="0 0 26 26" aria-label="search icon">
+                                    <defs>
+                                        <style>
+                                            .path {
+                                                fill: none;
+                                                stroke: #000;
+                                                stroke-miterlimit: 10;
+                                                stroke-width: 1.5px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+                                    <line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+                                </svg>
+                                <span class="mfn-close-icon icon_close" tabindex="0"><span
+                                        class="icon">✕</span></span>
+
+
+                                <input type="text" class="field" name="s" autocomplete="off"
+                                    placeholder="Enter your search">
+                                <input type="submit" class="display-none" value="">
+
+                            </form>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+    </div>
+
+    <!-- ====================================END OF NAVBAR============================== -->
+
+
+    <section class="contact">
+        <div class="container contact__container">
+            <aside class="contact__aside">
+                <div class="aside__image">
+                    <img src="./images/contact.svg" alt="">
+                </div>
+                <h2>Contact Us</h2>
+                <p>Please feel free to contact us for further information on any of our services, or to arrange a no-obligation meeting to discuss the ways in which we can assist you.
+                </p>
+                <ul>
+                    <li>
+                        <i class="uil uil-phone-times"></i>
+                        <h5>+2348102735491</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>Support@epcacademy.com</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Nigeria</h5>
+                    </li>
+                </ul>
+                <ul class="contact__socials">
+                    <li><a href="http://facebook.com" target="_blank"><i class="uil uilfacebook-f"></i></a></li>
+                    <li><a href="http://instagram.com" target="_blank "><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="http://twitter.com" target="_blank "><i class="uil uil-twitter"></i></a></li>
+                    <li><a href="http://github.com" target="_blank "><i class="uil uil-github"></i></a></ul></li>
+            </aside>
+
+            <form action="" method="post" class="contact__form">
+                <div class="form__name">
+                    <input type="text" name="First Name" placeholder="First Name" required id="">
+                    <input type="text" name="Last Name" placeholder="Last Name" required id="">
+                </div>
+                <input type="email" name="Email Address"  placeholder="Your Email Address" required id="">
+                <textarea name="Message" placeholder="Message"  rows="7" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- ==================================================FOOTER SECTION=========================================== -->
+    
+    
+    
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo">
+                    <H4>EPC ACADEMIC</H4>
+                </a>
+                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat asperiores, aliquid maiores repellat
+                    minus ex.</P>
+            </div>
+    
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="primacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Term and Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+234 810 273 5491</p>
+                    <p>epcacademics@gmail.com</p>
+                </div>
+    
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; PrivaLex</small>
+        </div>
+    </footer>
+</body>
+</html>
