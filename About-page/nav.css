@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,13 +14,13 @@
     --color-warning: #f7c94b;
     --color-denger: #f75842;
     --color-danger-varient: rgba(245, 88, 66, 0.4);
-    --color-white:#ffff;
+    --color-white: #ffff;
     --color-light: rgba(255, 255, 255, 0.7);
     --color-black: #000;
     --color-bg: #1f2641;
     --color-bg1: #2e3267;
     --color-bg2: #423898;
-    
+
     --container-width-lg: 80%;
     --container-width-mb: 90%;
     --container-width-sn: 94%;
@@ -28,14 +28,71 @@
     --transition: all 400ms ease;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1,7;
+    line-height: 1, 7;
     color: var(--color-white);
     background: var(--color-bg);
 }
 
-#Action_bar .columns{
+.layout-full-width #Wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+#Wrapper,
+#Content,
+.mfn-popup .mfn-popup-content,
+.mfn-off-canvas-sidebar .mfn-off-canvas-content-wrapper,
+.mfn-cart-holder,
+.mfn-header-login,
+#Top_bar .search_wrapper,
+#Top_bar .top_bar_right .mfn-live-search-box,
+.column_livesearch .mfn-live-search-wrapper,
+.column_livesearch .mfn-live-search-box {
+    background-color: #FCFCFC
+}
+
+.header-creative.layout-full-width #Wrapper {
+    padding-top: 60px
+}
+
+
+*::selection {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+#Header_wrapper {
+    background-image: url(images/DPO_Logo_YellowR-e1616947369810.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#Header_wrapper,
+#Intro {
+    background-color: var(--color-primary);
+}
+
+#Header_wrapper {
+    position: relative;
+}
+
+#Header {
+    min-height: 0px;
+}
+
+#Header {
+    position: relative;
+    display: block;
+}
+
+.header-plain #Action_bar {
+    background-color: #2C2C2C;
+}
+
+#Action_bar .columns {
     margin-bottom: 0;
     overflow: hidden;
     padding: 0 20px;
@@ -44,4 +101,135 @@ body{
 
 .one.columns {
     width: 100%;
+}
+
+.column,
+.columns {
+    float: left;
+    margin: 0;
+}
+
+#Action_bar {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    line-height: 21px;
+}
+
+.layout-full-width.header-fw #Action_bar .container,
+.layout-full-width.header-fw #Top_bar .container {
+    max-width: 100%;
+}
+
+#Header .container {
+    padding-left: var(--mfn-column-gap-left);
+    padding-right: var(--mfn-column-gap-right);
+    box-sizing: border-box;
+}
+
+#Action_bar .contact_details {
+    float: right;
+    margin-left: 25px;
+}
+
+#Action_bar .contact_details {
+    color: #ffffff;
+}
+
+ul {
+    list-style: none outside;
+}
+
+.header-plain #Action_bar .contact_details li {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-plain #Action_bar .contact_details li,
+.header-plain #Action_bar .social,
+.header-plain #Action_bar .social-menu {
+    padding: 12px 0;
+}
+
+#Action_bar .contact_details li {
+    display: inline-block;
+    margin-right: 10px;
+    /* padding: 20px 0; */
+}
+
+#Action_bar .contact_details li>i {
+    color: var(--color-primary);
+}
+
+#Action_bar .contact_details li>i {
+    margin-right: 2px;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+#Action_bar .contact_details a {
+    color: var(--color-white);
+}
+
+a {
+    font-weight: bold !important;
+}
+
+a,
+a:visited,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+#Action_bar .contact_details li:last-child {
+    margin-right: 0;
+}
+*::selection {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+#Action_bar .social {
+    float: right;
+    padding: 20px 0;
+}
+
+#Action_bar .social li:last-child {
+    margin-right: 0;
+}
+
+#Action_bar .social li {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+#Action_bar .social li a,
+#Header_creative .social li a,
+#Action_bar:not(.creative) .social-menu a {
+    color: #ffffff;
+}
+
+a {
+    font-weight: bold !important;
+}
+
+#Action_bar .social li a {
+    color: rgba(255, 255, 255, .3);
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
