@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+
+<head>
+
+	<script data-cfasync="false" data-no-defer="1" data-no-minify="1"
+		data-no-optimize="1">var ewww_webp_supported = !1; function check_webp_feature(A, e) { var w; e = void 0 !== e ? e : function () { }, ewww_webp_supported ? e(ewww_webp_supported) : ((w = new Image).onload = function () { ewww_webp_supported = 0 < w.width && 0 < w.height, e && e(ewww_webp_supported) }, w.onerror = function () { e && e(!1) }, w.src = "data:image/webp;base64," + { alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==" }[A]) } check_webp_feature("alpha");</script>
+	<script data-cfasync="false" data-no-defer="1" data-no-minify="1"
+		data-no-optimize="1">var Arrive = function (c, w) { "use strict"; if (c.MutationObserver && "undefined" != typeof HTMLElement) { var r, a = 0, u = (r = HTMLElement.prototype.matches || HTMLElement.prototype.webkitMatchesSelector || HTMLElement.prototype.mozMatchesSelector || HTMLElement.prototype.msMatchesSelector, { matchesSelector: function (e, t) { return e instanceof HTMLElement && r.call(e, t) }, addMethod: function (e, t, r) { var a = e[t]; e[t] = function () { return r.length == arguments.length ? r.apply(this, arguments) : "function" == typeof a ? a.apply(this, arguments) : void 0 } }, callCallbacks: function (e, t) { t && t.options.onceOnly && 1 == t.firedElems.length && (e = [e[0]]); for (var r, a = 0; r = e[a]; a++)r && r.callback && r.callback.call(r.elem, r.elem); t && t.options.onceOnly && 1 == t.firedElems.length && t.me.unbindEventWithSelectorAndCallback.call(t.target, t.selector, t.callback) }, checkChildNodesRecursively: function (e, t, r, a) { for (var i, n = 0; i = e[n]; n++)r(i, t, a) && a.push({ callback: t.callback, elem: i }), 0 < i.childNodes.length && u.checkChildNodesRecursively(i.childNodes, t, r, a) }, mergeArrays: function (e, t) { var r, a = {}; for (r in e) e.hasOwnProperty(r) && (a[r] = e[r]); for (r in t) t.hasOwnProperty(r) && (a[r] = t[r]); return a }, toElementsArray: function (e) { return e = void 0 !== e && ("number" != typeof e.length || e === c) ? [e] : e } }), e = (l.prototype.addEvent = function (e, t, r, a) { a = { target: e, selector: t, options: r, callback: a, firedElems: [] }; return this._beforeAdding && this._beforeAdding(a), this._eventsBucket.push(a), a }, l.prototype.removeEvent = function (e) { for (var t, r = this._eventsBucket.length - 1; t = this._eventsBucket[r]; r--)e(t) && (this._beforeRemoving && this._beforeRemoving(t), (t = this._eventsBucket.splice(r, 1)) && t.length && (t[0].callback = null)) }, l.prototype.beforeAdding = function (e) { this._beforeAdding = e }, l.prototype.beforeRemoving = function (e) { this._beforeRemoving = e }, l), t = function (i, n) { var o = new e, l = this, s = { fireOnAttributesModification: !1 }; return o.beforeAdding(function (t) { var e = t.target; e !== c.document && e !== c || (e = document.getElementsByTagName("html")[0]); var r = new MutationObserver(function (e) { n.call(this, e, t) }), a = i(t.options); r.observe(e, a), t.observer = r, t.me = l }), o.beforeRemoving(function (e) { e.observer.disconnect() }), this.bindEvent = function (e, t, r) { t = u.mergeArrays(s, t); for (var a = u.toElementsArray(this), i = 0; i < a.length; i++)o.addEvent(a[i], e, t, r) }, this.unbindEvent = function () { var r = u.toElementsArray(this); o.removeEvent(function (e) { for (var t = 0; t < r.length; t++)if (this === w || e.target === r[t]) return !0; return !1 }) }, this.unbindEventWithSelectorOrCallback = function (r) { var a = u.toElementsArray(this), i = r, e = "function" == typeof r ? function (e) { for (var t = 0; t < a.length; t++)if ((this === w || e.target === a[t]) && e.callback === i) return !0; return !1 } : function (e) { for (var t = 0; t < a.length; t++)if ((this === w || e.target === a[t]) && e.selector === r) return !0; return !1 }; o.removeEvent(e) }, this.unbindEventWithSelectorAndCallback = function (r, a) { var i = u.toElementsArray(this); o.removeEvent(function (e) { for (var t = 0; t < i.length; t++)if ((this === w || e.target === i[t]) && e.selector === r && e.callback === a) return !0; return !1 }) }, this }, i = new function () { var s = { fireOnAttributesModification: !1, onceOnly: !1, existing: !1 }; function n(e, t, r) { return !(!u.matchesSelector(e, t.selector) || (e._id === w && (e._id = a++), -1 != t.firedElems.indexOf(e._id))) && (t.firedElems.push(e._id), !0) } var c = (i = new t(function (e) { var t = { attributes: !1, childList: !0, subtree: !0 }; return e.fireOnAttributesModification && (t.attributes = !0), t }, function (e, i) { e.forEach(function (e) { var t = e.addedNodes, r = e.target, a = []; null !== t && 0 < t.length ? u.checkChildNodesRecursively(t, i, n, a) : "attributes" === e.type && n(r, i) && a.push({ callback: i.callback, elem: r }), u.callCallbacks(a, i) }) })).bindEvent; return i.bindEvent = function (e, t, r) { t = void 0 === r ? (r = t, s) : u.mergeArrays(s, t); var a = u.toElementsArray(this); if (t.existing) { for (var i = [], n = 0; n < a.length; n++)for (var o = a[n].querySelectorAll(e), l = 0; l < o.length; l++)i.push({ callback: r, elem: o[l] }); if (t.onceOnly && i.length) return r.call(i[0].elem, i[0].elem); setTimeout(u.callCallbacks, 1, i) } c.call(this, e, t, r) }, i }, o = new function () { var a = {}; function i(e, t) { return u.matchesSelector(e, t.selector) } var n = (o = new t(function () { return { childList: !0, subtree: !0 } }, function (e, r) { e.forEach(function (e) { var t = e.removedNodes, e = []; null !== t && 0 < t.length && u.checkChildNodesRecursively(t, r, i, e), u.callCallbacks(e, r) }) })).bindEvent; return o.bindEvent = function (e, t, r) { t = void 0 === r ? (r = t, a) : u.mergeArrays(a, t), n.call(this, e, t, r) }, o }; d(HTMLElement.prototype), d(NodeList.prototype), d(HTMLCollection.prototype), d(HTMLDocument.prototype), d(Window.prototype); var n = {}; return s(i, n, "unbindAllArrive"), s(o, n, "unbindAllLeave"), n } function l() { this._eventsBucket = [], this._beforeAdding = null, this._beforeRemoving = null } function s(e, t, r) { u.addMethod(t, r, e.unbindEvent), u.addMethod(t, r, e.unbindEventWithSelectorOrCallback), u.addMethod(t, r, e.unbindEventWithSelectorAndCallback) } function d(e) { e.arrive = i.bindEvent, s(i, e, "unbindArrive"), e.leave = o.bindEvent, s(o, e, "unbindLeave") } }(window, void 0), ewww_webp_supported = !1; function check_webp_feature(e, t) { var r; ewww_webp_supported ? t(ewww_webp_supported) : ((r = new Image).onload = function () { ewww_webp_supported = 0 < r.width && 0 < r.height, t(ewww_webp_supported) }, r.onerror = function () { t(!1) }, r.src = "data:image/webp;base64," + { alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==", animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA" }[e]) } function ewwwLoadImages(e) { if (e) { for (var t = document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"), r = 0, a = t.length; r < a; r++)ewwwAttr(t[r], "data-src", t[r].getAttribute("data-webp")), ewwwAttr(t[r], "data-thumbnail", t[r].getAttribute("data-webp-thumbnail")); for (var i = document.querySelectorAll("div.woocommerce-product-gallery__image"), r = 0, a = i.length; r < a; r++)ewwwAttr(i[r], "data-thumb", i[r].getAttribute("data-webp-thumb")) } for (var n = document.querySelectorAll("video"), r = 0, a = n.length; r < a; r++)ewwwAttr(n[r], "poster", e ? n[r].getAttribute("data-poster-webp") : n[r].getAttribute("data-poster-image")); for (var o, l = document.querySelectorAll("img.ewww_webp_lazy_load"), r = 0, a = l.length; r < a; r++)e && (ewwwAttr(l[r], "data-lazy-srcset", l[r].getAttribute("data-lazy-srcset-webp")), ewwwAttr(l[r], "data-srcset", l[r].getAttribute("data-srcset-webp")), ewwwAttr(l[r], "data-lazy-src", l[r].getAttribute("data-lazy-src-webp")), ewwwAttr(l[r], "data-src", l[r].getAttribute("data-src-webp")), ewwwAttr(l[r], "data-orig-file", l[r].getAttribute("data-webp-orig-file")), ewwwAttr(l[r], "data-medium-file", l[r].getAttribute("data-webp-medium-file")), ewwwAttr(l[r], "data-large-file", l[r].getAttribute("data-webp-large-file")), null != (o = l[r].getAttribute("srcset")) && !1 !== o && o.includes("R0lGOD") && ewwwAttr(l[r], "src", l[r].getAttribute("data-lazy-src-webp"))), l[r].className = l[r].className.replace(/\bewww_webp_lazy_load\b/, ""); for (var s = document.querySelectorAll(".ewww_webp"), r = 0, a = s.length; r < a; r++)e ? (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-webp")), ewwwAttr(s[r], "src", s[r].getAttribute("data-src-webp")), ewwwAttr(s[r], "data-orig-file", s[r].getAttribute("data-webp-orig-file")), ewwwAttr(s[r], "data-medium-file", s[r].getAttribute("data-webp-medium-file")), ewwwAttr(s[r], "data-large-file", s[r].getAttribute("data-webp-large-file")), ewwwAttr(s[r], "data-large_image", s[r].getAttribute("data-webp-large_image")), ewwwAttr(s[r], "data-src", s[r].getAttribute("data-webp-src"))) : (ewwwAttr(s[r], "srcset", s[r].getAttribute("data-srcset-img")), ewwwAttr(s[r], "src", s[r].getAttribute("data-src-img"))), s[r].className = s[r].className.replace(/\bewww_webp\b/, "ewww_webp_loaded"); window.jQuery && jQuery.fn.isotope && jQuery.fn.imagesLoaded && (jQuery(".fusion-posts-container-infinite").imagesLoaded(function () { jQuery(".fusion-posts-container-infinite").hasClass("isotope") && jQuery(".fusion-posts-container-infinite").isotope() }), jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function () { jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope() })) } function ewwwWebPInit(e) { ewwwLoadImages(e), ewwwNggLoadGalleries(e), document.arrive(".ewww_webp", function () { ewwwLoadImages(e) }), document.arrive(".ewww_webp_lazy_load", function () { ewwwLoadImages(e) }), document.arrive("videos", function () { ewwwLoadImages(e) }), "loading" == document.readyState ? document.addEventListener("DOMContentLoaded", ewwwJSONParserInit) : ("undefined" != typeof galleries && ewwwNggParseGalleries(e), ewwwWooParseVariations(e)) } function ewwwAttr(e, t, r) { null != r && !1 !== r && e.setAttribute(t, r) } function ewwwJSONParserInit() { "undefined" != typeof galleries && check_webp_feature("alpha", ewwwNggParseGalleries), check_webp_feature("alpha", ewwwWooParseVariations) } function ewwwWooParseVariations(e) { if (e) for (var t = document.querySelectorAll("form.variations_form"), r = 0, a = t.length; r < a; r++) { var i = t[r].getAttribute("data-product_variations"), n = !1; try { for (var o in i = JSON.parse(i)) void 0 !== i[o] && void 0 !== i[o].image && (void 0 !== i[o].image.src_webp && (i[o].image.src = i[o].image.src_webp, n = !0), void 0 !== i[o].image.srcset_webp && (i[o].image.srcset = i[o].image.srcset_webp, n = !0), void 0 !== i[o].image.full_src_webp && (i[o].image.full_src = i[o].image.full_src_webp, n = !0), void 0 !== i[o].image.gallery_thumbnail_src_webp && (i[o].image.gallery_thumbnail_src = i[o].image.gallery_thumbnail_src_webp, n = !0), void 0 !== i[o].image.thumb_src_webp && (i[o].image.thumb_src = i[o].image.thumb_src_webp, n = !0)); n && ewwwAttr(t[r], "data-product_variations", JSON.stringify(i)) } catch (e) { } } } function ewwwNggParseGalleries(e) { if (e) for (var t in galleries) { var r = galleries[t]; galleries[t].images_list = ewwwNggParseImageList(r.images_list) } } function ewwwNggLoadGalleries(e) { e && document.addEventListener("ngg.galleria.themeadded", function (e, t) { window.ngg_galleria._create_backup = window.ngg_galleria.create, window.ngg_galleria.create = function (e, t) { var r = $(e).data("id"); return galleries["gallery_" + r].images_list = ewwwNggParseImageList(galleries["gallery_" + r].images_list), window.ngg_galleria._create_backup(e, t) } }) } function ewwwNggParseImageList(e) { for (var t in e) { var r = e[t]; if (void 0 !== r["image-webp"] && (e[t].image = r["image-webp"], delete e[t]["image-webp"]), void 0 !== r["thumb-webp"] && (e[t].thumb = r["thumb-webp"], delete e[t]["thumb-webp"]), void 0 !== r.full_image_webp && (e[t].full_image = r.full_image_webp, delete e[t].full_image_webp), void 0 !== r.srcsets) for (var a in r.srcsets) nggSrcset = r.srcsets[a], void 0 !== r.srcsets[a + "-webp"] && (e[t].srcsets[a] = r.srcsets[a + "-webp"], delete e[t].srcsets[a + "-webp"]); if (void 0 !== r.full_srcsets) for (var i in r.full_srcsets) nggFSrcset = r.full_srcsets[i], void 0 !== r.full_srcsets[i + "-webp"] && (e[t].full_srcsets[i] = r.full_srcsets[i + "-webp"], delete e[t].full_srcsets[i + "-webp"]) } return e } check_webp_feature("alpha", ewwwWebPInit);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="images/home-logo.png" type="image/x-icon">
+
+
+	<script src="../js/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="../css/style.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="classic-theme-styles-css" href="../css/classic-themes.min.css" type="text/css"
+		media="all">
+
+	<link rel="stylesheet" id="dashicons-css" href="../css/dashicons.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wcb-css-css" href="../css/style.css" type="text/css" media="all">
+	<style id="lcpro-custom-inline-css" type="text/css">
+		.sp-logo-carousel-pro-section {
+			max-height: none !important;
+		}
+
+		.page-indicators li {
+			display: none;
+		}
+
+		.lcp-pagination {
+			display: none !important;
+		}
+	</style>
+	<link rel="stylesheet" id="mfn-be-css" href="../css/be.css" type="text/css" media="all">
+	<link rel="stylesheet" id="mfn-animations-css" href="../css/animations.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="mfn-font-awesome-css" href="../css/fontawesome.css" type="text/css" media="all">
+	<link rel="stylesheet" id="mfn-jplayer-css" href="../css/jplayer.blue.monday.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="mfn-responsive-css" href="../css/responsive.css" type="text/css" media="all">
+	<link rel="stylesheet" id="mfn-fonts-css" href="../css/mfn-fonts.css" type="text/css" media="all">
+	<link rel="stylesheet" id="js_composer_front-css" href="../css/js_composer.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="js_composer_custom_css-css" href="../css/custom.css" type="text/css" media="all">
+	<link rel="stylesheet" id="the-grid-css" href="../css/the-grid.min.css" type="text/css" media="all">
+	<link rel="stylesheet" id="style-css" href="../css/style.css" type="text/css" media="all">
+
+
+
+
+	<link rel="stylesheet" id="glossary-hint-css" href="../css/tooltip-classic.css" type="text/css" media="all">
+	<link rel="stylesheet" id="glossary-mobile-tooltip-css" href="../css/mobile-tooltip.css" type="text/css"
+		media="all">
+	<script type="text/javascript" src="../js/jquery.min.js" id="jquery-core-js"></script>
+	<script type="text/javascript" src="../js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+	<link rel="https://api.w.org/" href="https:///wp-json/">
+	<link rel="alternate" type="application/json" href="https:///wp-json/wp/v2/pages/8193">
+
+	<noscript>
+		<style>
+			.lazyload[data-src] {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+	<style>
+		.lazyload {
+			background-image: none !important;
+		}
+
+		.lazyload:before {
+			background-image: none !important;
+		}
+	</style>
+	<meta name="generator"
+		content="Powered by Slider Revolution 6.6.13 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+
+
+
+	<script>function setREVStartSize(e) {
+			//window.requestAnimationFrame(function() {
+			window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+			window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+			try {
+				var pw = document.getElementById(e.c).parentNode.offsetWidth,
+					newh;
+				pw = pw === 0 || isNaN(pw) || (e.l == "fullwidth" || e.layout == "fullwidth") ? window.RSIW : pw;
+				e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+				e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+				e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+				e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+				e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+				e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+				e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+				if (e.layout === "fullscreen" || e.l === "fullscreen")
+					newh = Math.max(e.mh, window.RSIH);
+				else {
+					e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+					for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+					e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+					e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+					for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+					var nl = new Array(e.rl.length),
+						ix = 0,
+						sl;
+					e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+					e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+					e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+					e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+					for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+					sl = nl[0];
+					for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+					var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+					newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+				}
+				var el = document.getElementById(e.c);
+				if (el !== null && el) el.style.height = newh + "px";
+				el = document.getElementById(e.c + "_wrapper");
+				if (el !== null && el) {
+					el.style.height = newh + "px";
+					el.style.display = "block";
+				}
+			} catch (e) {
+				console.log("Failure at Presize of Slider:" + e)
+			}
+			//});
+		};</script>
+	<style type="text/css" id="wp-custom-css">
+		.the_content_wrapper {
+			padding-top: 3%;
+		}
+
+		.anchorlink::before {
+			display: block;
+			content: " ";
+			margin-top: -80px;
+			height: 80px;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		.fb3d-default-page {
+			margin-top: 100px;
+		}
+
+		.page-id-7952 .fixedHeight {
+			height: 750px !important;
+		}
+
+		.JobLink {
+			color: #000;
+		}
+
+		.JobLink:hover {
+			color: #6c63ff;
+		}
+
+		@media only screen and (max-width: 767px) {
+			.scrollable-table-container {
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+				/* For smoother scrolling on iOS */
+			}
+		}
+	</style>
+
+</head>
+
+<body data-rsssl="1"
+	class="home page-template-default page page-id-8193 tribe-js color-custom content-brightness-light input-brightness-light style-default button-stroke layout-full-width hide-love cf7p-message header-plain header-fw sticky-header sticky-tb-color ab-show menu-line-below-80-1 menuo-right menuo-no-borders menuo-sub-active subheader-both-left mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-sticky mobile-header-mini mobile-icon-user-ss mobile-icon-wishlist-ss mobile-icon-search-ss mobile-icon-wpml-ss mobile-icon-action-ss be-page-8193 be-reg-2682 wpb-js-composer js-comp-ver-6.10.0 vc_responsive webp-support">
+
+	<script data-cfasync="false" data-no-defer="1" data-no-minify="1"
+		data-no-optimize="1">if (typeof ewww_webp_supported === "undefined") { var ewww_webp_supported = !1 } if (ewww_webp_supported) { document.body.classList.add("webp-support") }</script>
+
+
+	<div id="Wrapper">
+
+
+
+		<div id="Header_wrapper" class="">
+
+			<header id="Header">
+				<div id="Action_bar">
+					<div class="container">
+						<div class="column one">
+
+							<ul class="contact_details" aria-label="contact details">
+								<li class="slogan">Contact The Cyber Trust</li>
+								<li class="phone phone-1"><i class="icon-phone" aria-label="phone"></i><a
+										href="tel:+44(0)7588290009">+44 (0)758 829 0009</a></li>
+								<li class="mail"><i class="icon-mail-line" aria-label="mail"></i><a
+										href="mailto:hello@EkomIbiok@icould.com">hello@Ekomibiok</a></li>
+							</ul>
+							<ul class="social" role="navigation" aria-label="social menu">
+								<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/"
+										title="LinkedIn" aria-label="LinkedIn icon"><i class="icon-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="header_placeholder"></div>
+
+				<div id="Top_bar" class="loading">
+
+					<nav class="container">
+						<div class="column one">
+
+							<div class="top_bar_left clearfix">
+								<div class="logo">
+									<a id="logo" href="index.html"
+										title="Outsourced Data Protection Officers GDPR and Data Protection Compliance"
+										data-height="60" data-padding="15"><img class="logo-main scale-with-grid "
+											src="../images/home-logo.png" alt="DPO Centre" />
+									</a>
+								</div>
+
+								<div class="menu_wrapper">
+									<a class="responsive-menu-toggle " href="#" aria-label="mobile menu"><i
+											class="icon-menu-fine" aria-hidden="true"></i></a>
+									<nav id="menu" role="navigation" aria-expanded="false" aria-label="Main menu">
+										<ul id="menu-mainmenu" class="menu menu-main">
+											<li id="menu-item-6187"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+												<a href="/services/services.html"><span>Services</span></a>
+												<ul class="sub-menu">
+													<li id="menu-item-25082"
+														class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+														<a><span>Outsourced Data Protection Officer (DPO)
+																Services</span></a>
+														<ul class="sub-menu">
+															<li id="menu-item-25079"
+																class="menu-item menu-item-type-post_type menu-item-object-page">
+																<a href="/services/outsourced-dpo-services.html"><span>Nigeria
+																		Outsourced Data Protection Officers</span></a>
+															</li>
+															<li id="menu-item-25080"
+																class="menu-item menu-item-type-custom menu-item-object-custom">
+																<a href="/services/outsourced-dpo-services.html"><span>UK
+																		Outsourced Data Protection Officers</span></a>
+															</li>
+															<li id="menu-item-25081"
+																class="menu-item menu-item-type-custom menu-item-object-custom">
+																<a href="/services/outsourced-dpo-services.html"><span>Canadian
+																		Outsourced Data Privacy Officers</span></a>
+															</li>
+														</ul>
+													</li>
+													<li id="menu-item-20690"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/representation-services.html"><span>EU &amp;
+																UK GDPR Representative Services</span></a>
+													</li>
+													<li id="menu-item-12323"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/consultancy-services.html"><span>Data
+																Protection Consultancy<pan></a>
+													</li>
+													<li id="menu-item-16496"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/data-protection-training.html"><span>Data
+																Protectection Training</span></a>
+													</li>
+													<li id="menu-item-16535"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/ai.html"><span>Ai Governance and
+																Compliance</span></a>
+													</li>
+													<li id="menu-item-17198"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/consultancy-services.html"><span>Cybersecurity
+																Consultancy<span></a>
+													</li>
+													<li id="menu-item-11131"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/services/tech-policy-research.html"><span>Tech Policy
+																Research and Advisory</span></a>
+													</li>
+												</ul>
+											</li>
+											<li id="menu-item-9904"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+												<a href="/Sectors/sectors.html"><span>Sectors</span></a>
+												<ul class="sub-menu">
+													<li id="menu-item-9891"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/Sectors/finance-insurance.html"><span>Finance
+																&amp; Insurance</span></a>
+													</li>
+													<li id="menu-item-9892"
+														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+														<a href="/Sectors/healthcare.html"><span>Medical
+																&amp; Healthcare</span></a>
+													</li>
+													<li id="menu-item-9895"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/Sectors/software-technology.html"><span>Software
+																&amp; Technology</span></a>
+													</li>
+													<li id="menu-item-9894"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/Sectors/retail-ecommerce.html"><span>Retail
+																&amp; eCommerce</span></a>
+													</li>
+													<li id="menu-item-9890"
+														class="menu-item menu-item-type-post_type menu-item-object-page">
+														<a href="/Sectors/education.html"><span>Education &amp;
+																Shools</span></a>
+													</li>
+											</li>
+										</ul>
+										</li>
+										<li id="menu-item-9906"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+											<a><span>About Us</span></a>
+											<ul class="sub-menu">
+												<li id="menu-item-11154"
+													class="menu-item menu-item-type-post_type menu-item-object-page">
+													<a href="/About-Us/about-us.html"><span>About
+															Us</span></a>
+												</li>
+												<li id="menu-item-7571"
+													class="menu-item menu-item-type-post_type menu-item-object-page">
+													<a href="/About-Us/our-team.html"><span>Our
+															Team</span></a>
+												</li>
+												<li id="menu-item-18340"
+													class="menu-item menu-item-type-post_type menu-item-object-page">
+													<a href="./About-Us/media-centre.html"><span>Media
+															Centre</span></a>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-9908"
+											class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+											<a><span>Resources</span></a>
+											<ul class="sub-menu">
+												<li id="menu-item-9907"
+													class="menu-item menu-item-type-post_type menu-item-object-page">
+													<a href="/Resources/case-studies.html"><span>Case
+															Studies</span></a>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-5902"
+											class="menu-item menu-item-type-post_type menu-item-object-page"><a
+												href="/contact-us.html"><span>Contact
+													us</span></a></li>
+										<li id="menu-item-25652"
+											class="menu-item menu-item-type-post_type menu-item-object-page"><a
+												href="/join-us.html"><span>* Join
+													Us *</span></a></li>
+										</ul>
+									</nav>
+								</div>
+
+								<div class="secondary_menu_wrapper">
+								</div>
+
+								<div class="banner_wrapper">
+								</div>
+
+							</div>
+
+							<div class="top_bar_right ">
+								<div class="top_bar_right_wrapper"><a id="search_button"
+										class="top-bar-right-icon top-bar-right-icon-search search_button" href="#"><svg
+											width="26" viewBox="0 0 26 26" aria-label="search icon">
+											<defs>
+												<style>
+													.path {
+														fill: none;
+														stroke: #000;
+														stroke-miterlimit: 10;
+														stroke-width: 1.5px;
+													}
+												</style>
+											</defs>
+											<circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+											<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+										</svg></a></div>
+							</div>
+							<div class="search_wrapper">
+
+								<form method="get" class="form-searchform" action="index.html">
+
+
+									<svg class="icon_search" width="26" viewBox="0 0 26 26" aria-label="search icon">
+										<defs>
+											<style>
+												.path {
+													fill: none;
+													stroke: #000;
+													stroke-miterlimit: 10;
+													stroke-width: 1.5px;
+												}
+											</style>
+										</defs>
+										<circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+										<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+									</svg>
+									<span class="mfn-close-icon icon_close" tabindex="0"><span
+											class="icon">✕</span></span>
+
+
+									<input type="text" class="field" name="s" autocomplete="off"
+										placeholder="Enter your search">
+									<input type="submit" class="display-none" value="">
+
+								</form>
+							</div>
+
+						</div>
+					</nav>
+				</div>
+			</header>
+
+		</div>
+	</div>
+	<div class="secondary_menu_wrapper">
+	</div>
+
+	<div class="banner_wrapper">
+	</div>
+
+	</div>
+
+	<div class="top_bar_right ">
+		<div class="top_bar_right_wrapper"><a id="search_button"
+				class="top-bar-right-icon top-bar-right-icon-search search_button" href="#"><svg width="26"
+					viewBox="0 0 26 26" aria-label="search icon">
+					<defs>
+						<style>
+							.path {
+								fill: none;
+								stroke: #000;
+								stroke-miterlimit: 10;
+								stroke-width: 1.5px;
+							}
+						</style>
+					</defs>
+					<circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+					<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+				</svg></a></div>
+	</div>
+	<div class="search_wrapper">
+
+		<form method="get" class="form-searchform" action="https:///">
+
+
+			<svg class="icon_search" width="26" viewBox="0 0 26 26" aria-label="search icon">
+				<defs>
+					<style>
+						.path {
+							fill: none;
+							stroke: #000;
+							stroke-miterlimit: 10;
+							stroke-width: 1.5px;
+						}
+					</style>
+				</defs>
+				<circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+				<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+			</svg>
+			<span class="mfn-close-icon icon_close" tabindex="0"><span class="icon">✕</span></span>
+
+
+			<input type="text" class="field" name="s" autocomplete="off" placeholder="Enter your search">
+			<input type="submit" class="display-none" value="">
+
+		</form>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	</header>
+
+	</div>
+
+
+	<!-- mfn_hook_content_before --><!-- mfn_hook_content_before -->
+	<div id="Content" role="main">
+		<div class="content_wrapper clearfix">
+
+			<div class="sections_group">
+
+				<div class="entry-content" itemprop="mainContentOfPage">
+
+
+					<div class="mfn-builder-content mfn-default-content-buider"></div>
+					<div class="section the_content has_content">
+						<div class="section_wrapper">
+							<div class="the_content_wrapper ">
+								<section class="wpb-content-wrapper">
+									<div class="vc_row wpb_row vc_row-fluid vc_custom_1551703819817">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="vc_empty_space  vc_custom_1619000160396"
+														style="height: 30px"><span class="vc_empty_space_inner"></span>
+													</div>
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1551703814984">
+														<div class="wpb_column vc_column_container vc_col-sm-8">
+															<div class="vc_column-inner vc_custom_1551703831853">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1622464091500">
+																		<div class="wpb_wrapper">
+																			<h1>Data Protection Services for Specific
+																				Industry Sectors</h1>
+
+																		</div>
+																	</div>
+																	<div class="vc_empty_space  vc_custom_1554814442047"
+																		style="height: 15px"><span
+																			class="vc_empty_space_inner"></span></div>
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1552315356691">
+																		<div class="wpb_wrapper">
+
+																		</div>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1726069114671">
+																		<div class="wpb_wrapper">
+																			<p><span style="font-weight: 400;">The DPO
+																					Centre’s data protection services
+																					are specifically tailored to the
+																					needs of your organisation and
+																					industry sector.&nbsp; The DPO
+																					Centre offers offers a pragmatic and
+																					flexible approach to achieving
+																					compliance with the GDPR, the UK
+																					Data Protection Act and other EU and
+																					UK data protection laws.&nbsp; Our
+																					large and broadly experienced <a
+																						href="/about-us/our-team/"
+																						target="_blank"
+																						rel="noopener">team</a> of Data
+																					Protection Officers deliver advice
+																					and expertise to your organisation,
+																					whenever and wherever you need
+																					it.&nbsp;</span></p>
+																			<p><span style="font-weight: 400;">Through
+																					our sector-specific services, you
+																					benefit from the knowledge and
+																					experience we have developed from
+																					working with over 1,000
+																					organisations. Our DPO team has
+																					worked across a wide-range of
+																					sectors and are therefore able to
+																					understand and adapt to the
+																					particular needs of your
+																					organisation and the markets in
+																					which you operate.</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="#scrollToMe">Contact Us</a> <a
+																					class="newBtn"
+																					href="tel:+44203 797 1289">Call
+																					Us</a></p>
+
+																		</div>
+																	</div>
+																	<div class="vc_empty_space" style="height: 32px">
+																		<span class="vc_empty_space_inner"></span></div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner vc_custom_1551703934417">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1612862501630  customShadow">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<div
+																				class="vc_single_image-wrapper   vc_box_border_grey">
+																				<img class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUUAAAF3AQMAAAAICMu4AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACZJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAACcAD2GAAG7VH42AAAAAElFTkSuQmCC"
+																					width="325" height="375"
+																					alt="Data Protection Officer"
+																					title=""
+																					data-src="https:///wp-content/uploads/2019/04/iStock-808157674-1-325x375.jpg"
+																					decoding="async"
+																					data-eio-rwidth="325"
+																					data-eio-rheight="375"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/iStock-808157674-1-325x375.jpg"
+																						width="325" height="375"
+																						alt="Data Protection Officer"
+																						title=""
+																						data-eio="l" /></noscript></div>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1600960608931">
+																		<div class="wpb_wrapper">
+																			<p
+																				style="font-size: 12pt; line-height: 14px !important;">
+																				<em><small>“We’ve built a strong ethos
+																						of data protection throughout
+																						the entire organisation and
+																						having a highly knowledgeable
+																						outsourced DPO from the DPO
+																						Centre has been integral to
+																						enabling us to achieve this. Our
+																						DPO has been able to advise on a
+																						wide range of legislative
+																						changes and how we should manage
+																						our fundraising activities
+																						whilst still protecting our
+																						donors’ privacy and their new
+																						rights under data protection
+																						law.”</small></em></p>
+																			<p
+																				style="font-size: 12pt; line-height: 14px !important;">
+																				<em><small>Emma Fuller<br>
+																						<strong><span
+																								style="color: #6c63ff;"><span
+																									style="font-size: 12.222222328186035px;"><i>NSPCC</i></span></span></strong></small></em>
+																			</p>
+																			<p
+																				style="font-size: 12pt; line-height: 14px !important;">
+																				<em><small>“The response time to queries
+																						has been spot on throughout our
+																						time with The DPO Centre and the
+																						quality of the responses has
+																						been spot on. Our DPO from the
+																						DPO Centre is an asset to our
+																						team.”</small></em></p>
+																			<p
+																				style="font-size: 12pt; line-height: 14px !important;">
+																				<em><small><strong><span
+																								style="color: #6c63ff;"><span
+																									style="font-size: 12.222222328186035px;"><i>Foreign
+																										Exchange
+																										Services
+																										company</i></span></span></strong></small></em>
+																			</p>
+
+																		</div>
+																	</div>
+																	<div class="vc_empty_space" style="height: 10px">
+																		<span class="vc_empty_space_inner"></span></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div
+														class="wpb_text_column wpb_content_element  vc_custom_1707915773367">
+														<div class="wpb_wrapper">
+															<p style="text-align: center;"><strong><span
+																		style="color: #6c63ff;">Alternatively click one
+																		of the options below to speak to
+																		us</span></strong></p>
+															<p>&nbsp;</p>
+															<p style="text-align: center;"><a class="customBtn"
+																	style="float: none; padding: 15px 25px; color: #000; font-weight: bold;"
+																	href="mailto:hello@dpocentre.com"><i
+																		class="fas fa-envelope"></i> Email</a> <a
+																	class="customBtn"
+																	style="float: none; padding: 15px 25px; color: #000; font-weight: bold;"
+																	href="Tel: 0203 797 1289"><i
+																		class="fa fa-phone fa-fw fa-lg"></i>Call</a></p>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1549290299438 vc_row-has-fill">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1622465207679">
+																		<div class="wpb_wrapper">
+																			<h2
+																				style="text-transform: uppercase !important;">
+																				Data Protection Services for INDUSTRY
+																				Sectors</h2>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+															<p><span style="font-weight: 400;">No sector is exempt from
+																	the need to comply with data protection laws.&nbsp;
+																	Every organisation must develop an awareness of
+																	their sector’s data privacy requirements and
+																	practices, and then implement appropriate technical
+																	and organisational measures to demonstrate
+																	compliance.&nbsp; Data protection requirements vary
+																	across sectors, as does risk appetite and customer
+																	expectations, therefore the steps taken and the
+																	solutions delivered must be tailored the specific
+																	needs of your sector.</span></p>
+															<p><span style="font-weight: 400;">Our tailored data
+																	protection solutions provide your organisation with
+																	access to Subject Matter Experts with the knowledge
+																	and experience required and the tools and
+																	documentation necessary to deliver the specific
+																	advice and guidance you need.&nbsp; This not only
+																	ensures your compliance, but also builds customer
+																	trust, engagement and loyalty, therefore
+																</span><span style="font-weight: 400;">differentiating
+																	your organisation within your market.</span></p>
+															<p><span style="font-weight: 400;">Whether you are in <a
+																		href="/sector/healthcare/" target="_blank"
+																		rel="noopener">medical and healthcare</a>, <a
+																		href="/sector/software-technology/"
+																		target="_blank" rel="noopener">software and
+																		tech</a>, <a href="/sector/retail-ecommerce/"
+																		target="_blank" rel="noopener">retail and
+																		eCommerce</a>, <a
+																		href="/sector/finance-insurance/"
+																		target="_blank" rel="noopener">finance and
+																		insurance</a>, <a href="/sector/education/"
+																		target="_blank" rel="noopener">education</a>, or
+																	a <a href="/sector/charities/" target="_blank"
+																		rel="noopener">not-for-profit</a>, our
+																	outstanding team of privacy professionals can
+																	provide the sector-specific experience you require.
+																</span></p>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a
+																					href="/sector/data-protection-for-life-sciences/"><span
+																						style="font-weight: 400;">Life
+																						Sciences</span></a></h3>
+																			<p><span style="font-weight: 400;">The
+																					constant developments within the
+																					research, development and
+																					manufacturing of pharmaceuticals,
+																					therapeutics, biotech and medical
+																					devices have made the need for
+																					robust personal data protection
+																					practices essential. For many
+																					research companies and clinical
+																					trial sponsors, appointing a Data
+																					Protection Officer (DPO) and a Data
+																					Protection Representative (DPR) are
+																					now fundamental legal and trial
+																					approval requirements.<br>
+																				</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/data-protection-for-life-sciences/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/healthcare/"><span
+																						style="font-weight: 400;">Medical
+																						and Healthcare</span></a></h3>
+																			<p><span style="font-weight: 400;">Medical
+																					and healthcare professionals and
+																					organisations conducting clinical
+																					trials play a key role in protecting
+																					patient data. In addition to the
+																					GDPR and UK Data Protection Act
+																					2018, organisations in this sector
+																					must also account for the NHS Data
+																					Security and Protection <a
+																						href="/services/dspt/"
+																						target="_blank"
+																						rel="noopener">Toolkit</a>,
+																					requirements for <a
+																						href="/services/caldicott-guardian/"
+																						target="_blank"
+																						rel="noopener">Caldicott
+																						Guardians</a> and ethics
+																					committees. Our solutions for the
+																					medical and healthcare sector have
+																					been tailored to the relevant
+																					legislation to ensure you remain
+																					compliant and uphold the highest
+																					standards of patient care.<br>
+																				</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href=" /sector/healthcare/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/software-technology/"><span
+																						style="font-weight: 400;">Software
+																						and Technology</span></a></h3>
+																			<p><span style="font-weight: 400;">Organisations
+																					involved in software and technology
+																					have a wide range of data protection
+																					issues to consider to remain
+																					compliant.&nbsp; These include
+																					mapping data flows, maintaining data
+																					security and international data
+																					transfers. The specialists from
+																					within our DPO team have the
+																					specific knowledge and experience
+																					required to address these issues,
+																					and to deliver the bespoke advice
+																					and guidance you require.<br>
+																				</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/software-technology/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/retail-ecommerce/"><span
+																						style="font-weight: 400;">Retail
+																						and eCommerce</span></a></h3>
+																			<p><span style="font-weight: 400;">High
+																					street retail is constantly
+																					evolving, with ever more market
+																					share moving online.&nbsp; This has
+																					created new and increased data
+																					protection risks and introduced new
+																					compliance requirements, especially
+																					when marketing electronically.&nbsp;
+																					The DPO Centre’s data protection
+																					services are tailored specifically
+																					to the retail and ecommerce sectors.
+																					We help your organisation to manage
+																					the personal data you process
+																					appropriately, ensure your staff
+																					receive the relevant advice and
+																					training and ensure you continue to
+																					maximise the commercial value from
+																					your marketing. </span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/retail-ecommerce/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/finance-insurance/"><span
+																						style="font-weight: 400;">Finance
+																						and Insurance</span></a></h3>
+																			<p><span style="font-weight: 400;">The
+																					finance and insurance sectors are
+																					already heavily regulated and have
+																					additional compliance requirements
+																					such as AML and KYC.&nbsp; However,
+																					specific attention is still required
+																					to ensure compliance with data
+																					protection law.&nbsp; Financial
+																					services specialists from within our
+																					DPO team deliver the knowledge and
+																					experience necessary to not only
+																					ensure compliance, but to also build
+																					customer trust, increase brand
+																					loyalty and improve engagement
+																					across your range of products and
+																					services.<br>
+																				</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/finance-insurance/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/education/"><span
+																						style="font-weight: 400;">Education
+																						Providers, Schools and
+																						Colleges</span></a></h3>
+																			<p><span style="font-weight: 400;">Due to
+																					the extent and sensitivity of
+																					personal data processed, schools and
+																					educational institutions, both
+																					public and private, are subject to
+																					strict data protection compliance
+																					requirements.&nbsp; Within our large
+																					team of Data Protection Officers, we
+																					have education specialists with the
+																					knowledge and experience required,
+																					as well as the tools and
+																					documentation necessary to deliver
+																					the specialist guidance you
+																					require.<br>
+																				</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/education/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<h3><a href="/sector/charities/ "><span
+																						style="font-weight: 400;">Charities
+																						and Not-for-Profit</span></a>
+																			</h3>
+																			<p><span style="font-weight: 400;">Charities,
+																					not-for-profit and membership
+																					organisations are subject to a wide
+																					range of data protection compliance
+																					requirements.&nbsp; These include
+																					handling large databases of personal
+																					data, processing special category
+																					data, data sharing and using
+																					personal data for marketing.&nbsp;
+																					The 3rd sector specialists within
+																					our team have worked with a wide
+																					range of NFPs, assisting them to
+																					identify areas of concern, implement
+																					appropriate controls, reduce risk
+																					and help</span><span
+																					style="font-weight: 400;">&nbsp;to
+																					enhance your return on investment in
+																					marketing.</span></p>
+																			<p>&nbsp;</p>
+																			<p><a class="newBtn"
+																					href="/sector/charities/">Read
+																					more</a></p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1553603933231 vc_row-has-fill">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1621944297990">
+																		<div class="wpb_wrapper">
+																			<h2
+																				style="text-transform: uppercase !important;">
+																				Benefits of Outsourced Data Protection
+																				Services</h2>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_text_column wpb_content_element ">
+																		<div class="wpb_wrapper">
+																			<p><span style="font-weight: 400;">At The
+																					DPO Centre, we believe that our
+																					outsourced Data Protection Officers
+																					provide your organisation with a
+																					higher standard of expertise and
+																					experience than is possible from a
+																					smaller team, an independent
+																					contractor, or internal employee.
+																					Our large team delivers specific
+																					expertise across each of the sectors
+																					described above, along with
+																					knowledge of the issues, processes
+																					and practices that are specific to
+																					each sector, therefore ensuring your
+																					organisation is provided with the
+																					knowledge and experience required to
+																					quickly and effectively deliver the
+																					greatest value and return on your
+																					investment.</span></p>
+																			<p>As an operating expense, you pay only for
+																				the time from your DPO that you use, and
+																				you never need to meet the cost of
+																				ongoing training, benefits packages,
+																				absence, holidays or sickness, and you
+																				avoid all employment liabilities.</p>
+																			<p>The DPO Centre also has knowledge of
+																				numerous data protection and cyber
+																				security platforms, tools, vendors and
+																				software solutions, so provides informed
+																				guidance, reduced decision time and
+																				improved choice.</p>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height vc_row-flex">
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC"
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="gbp" width="150" height="150"
+																				data-src="https:///wp-content/uploads/2019/02/DPO_School_Icons8.png"
+																				decoding="async" data-eio-rwidth="150"
+																				data-eio-rheight="150"
+																				data-src-webp="https:///wp-content/uploads/2019/02/DPO_School_Icons8.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/02/DPO_School_Icons8.png"
+																					class="scale-with-grid" alt="gbp"
+																					width="150" height="150"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">Highly cost effective
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC"
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="thumbs up" width="150" height="150"
+																				data-src="https:///wp-content/uploads/2019/02/DPO_School_Icons10.png"
+																				decoding="async" data-eio-rwidth="150"
+																				data-eio-rheight="150"
+																				data-src-webp="https:///wp-content/uploads/2019/02/DPO_School_Icons10.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/02/DPO_School_Icons10.png"
+																					class="scale-with-grid"
+																					alt="thumbs up" width="150"
+																					height="150"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">Experience and shared best
+																				practice gained from working with over
+																				1,000 clients</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height vc_row-flex">
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC"
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="icon" width="150" height="150"
+																				data-src="https:///wp-content/uploads/2019/02/DPO_School_Icons11.png"
+																				decoding="async" data-eio-rwidth="150"
+																				data-eio-rheight="150"
+																				data-src-webp="https:///wp-content/uploads/2019/02/DPO_School_Icons11.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/02/DPO_School_Icons11.png"
+																					class="scale-with-grid" alt="icon"
+																					width="150" height="150"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">Designated Data Protection
+																				Officer working on site with your team
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARsAAAEbAQMAAADQ47JiAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACFJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAnwIo5wAB7U/7XQAAAABJRU5ErkJggg=="
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="DPO_Factsheet_Icons33" width="283"
+																				height="283"
+																				data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons33.png"
+																				decoding="async" data-eio-rwidth="283"
+																				data-eio-rheight="283"
+																				data-src-webp="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons33.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons33.png"
+																					class="scale-with-grid"
+																					alt="DPO_Factsheet_Icons33"
+																					width="283" height="283"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">Pre-existing model
+																				documentation tested and validated
+																				across varied industry sectors</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1554284203853 vc_row-o-equal-height vc_row-flex">
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWAQMAAAAGz+OhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABpJREFUGBntwTEBAAAAwiD7p14ND2AAAMC9AAu4AAHGdJuwAAAAAElFTkSuQmCC"
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="icon" width="150" height="150"
+																				data-src="https:///wp-content/uploads/2019/02/DPO_School_Icons13.png"
+																				decoding="async" data-eio-rwidth="150"
+																				data-eio-rheight="150"
+																				data-src-webp="https:///wp-content/uploads/2019/02/DPO_School_Icons13.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/02/DPO_School_Icons13.png"
+																					class="scale-with-grid" alt="icon"
+																					width="150" height="150"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">Pragmatic,
+																				straightforward, solution-driven advice
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-6">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="list_item lists_2 clearfix">
+																		<div class="list_left list_image"><img
+																				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARsAAAEbAQMAAADQ47JiAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACFJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAnwIo5wAB7U/7XQAAAABJRU5ErkJggg=="
+																				class="scale-with-grid lazyload ewww_webp_lazy_load"
+																				alt="DPO_Factsheet_Icons34" width="283"
+																				height="283"
+																				data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons34.png"
+																				decoding="async" data-eio-rwidth="283"
+																				data-eio-rheight="283"
+																				data-src-webp="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons34.png.webp"><noscript><img
+																					src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons34.png"
+																					class="scale-with-grid"
+																					alt="DPO_Factsheet_Icons34"
+																					width="283" height="283"
+																					data-eio="l" /></noscript></div>
+																		<div class="list_right">
+																			<div class="desc">UK and Pan-European
+																				expertise</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row wpb_row vc_row-fluid vc_custom_1553604103180">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div
+														class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1554281230047 vc_row-has-fill">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1620822019494">
+																		<div class="wpb_wrapper">
+																			<h2
+																				style="text-transform: uppercase !important;">
+																				Data Protection solutions for Sectors
+																			</h2>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+															<p><span style="font-weight: 400;">Every sector requires
+																	data protection solutions, but not every sector
+																	faces the same issues. Levels of risk vary depending
+																	on industry-specific compliance standards and market
+																	expectations. The DPO Centre understands the
+																	particular requirements of your sector and our
+																	experts can offer bespoke solutions for your
+																	organisation.</span></p>
+															<p><span style="font-weight: 400;">Our Subject Matter
+																	Experts have broad experience providing data
+																	protection and compliance services for various
+																	sectors. We also offer peace of mind that you are
+																	working with one of the largest, most established
+																	data protection service providers
+																	available.&nbsp;</span></p>
+															<p><span style="font-weight: 400;">No matter your industry,
+																	our expert DPOs can create tailored solutions to
+																	meet your needs and ensure compliance.</span></p>
+
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437533126">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/healthcare/"
+																				target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Medical and Healthcare"
+																					title="Medical and Healthcare"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons12-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons12-70x70.png"
+																						width="70" height="70"
+																						alt="Medical and Healthcare"
+																						title="Medical and Healthcare"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405046010">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/healthcare/"><strong>Medical
+																						and<br>
+																						Healthcare</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437522281">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/software-technology/"
+																				target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Software and Technology"
+																					title="Software and Technology"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons5-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons5-70x70.png"
+																						width="70" height="70"
+																						alt="Software and Technology"
+																						title="Software and Technology"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405067309">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/software-technology/"><strong>Software
+																						and<br>
+																						Technology</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437573386">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/retail-ecommerce/"
+																				target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Retail and eCommerce"
+																					title="Retail and eCommerce"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons4-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons4-70x70.png"
+																						width="70" height="70"
+																						alt="Retail and eCommerce"
+																						title="Retail and eCommerce"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405091482">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/retail-ecommerce/"><strong>Retail
+																						and<br>
+																						eCommerce</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437545064">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/finance-insurance/"
+																				target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Finance and Insurance"
+																					title="Finance and Insurance"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons6-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons6-70x70.png"
+																						width="70" height="70"
+																						alt="Finance and Insurance"
+																						title="Finance and Insurance"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405113032">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/finance-insurance/"><strong>Finance<br>
+																						and Insurance</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437453238">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/education/" target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Education, Schools and Colleges"
+																					title="Education, Schools and Colleges"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons3-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons3-70x70.png"
+																						width="70" height="70"
+																						alt="Education, Schools and Colleges"
+																						title="Education, Schools and Colleges"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405136110">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/education/"><strong>Education,
+																						Schools<br>
+																						and Colleges</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="wpb_column vc_column_container vc_col-sm-4">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div
+																		class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1563437598672">
+
+																		<figure class="wpb_wrapper vc_figure">
+																			<a href="/sector/charities/" target="_blank"
+																				class="vc_single_image-wrapper   vc_box_border_grey"><img
+																					class="vc_single_image-img  lazyload"
+																					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGAQMAAABL4HDHAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUGBljGAWjYIgCAAK8AAGuODn+AAAAAElFTkSuQmCC"
+																					width="70" height="70"
+																					alt="Charities and Not-for-profit"
+																					title="Charities and Not-for-profit"
+																					data-src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons7-70x70.png"
+																					decoding="async"
+																					data-eio-rwidth="70"
+																					data-eio-rheight="70"><noscript><img
+																						class="vc_single_image-img "
+																						src="https:///wp-content/uploads/2019/04/DPO_Factsheet_Icons7-70x70.png"
+																						width="70" height="70"
+																						alt="Charities and Not-for-profit"
+																						title="Charities and Not-for-profit"
+																						data-eio="l" /></noscript></a>
+																		</figure>
+																	</div>
+
+																	<div
+																		class="wpb_text_column wpb_content_element  vc_custom_1618405154311">
+																		<div class="wpb_wrapper">
+																			<h3 style="text-align: center;"><a
+																					href="https:///sector/charities/"><strong>Charities
+																						and<br>
+																						Not-for-profit</strong></a></h3>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-vc-full-width="true" data-vc-full-width-init="false"
+										class="vc_row wpb_row vc_row-fluid vc_custom_1547296771734 vc_row-has-fill">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="vc_empty_space" style="height: 55px"><span
+															class="vc_empty_space_inner"></span></div>
+													<h2 style="text-align: center"
+														class="vc_custom_heading vc_custom_1554915609660">What our
+														clients say about us</h2>
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+															<p class="mobLeft" style="text-align: center;"><a
+																	class="newBtn" href="/case-studies/">See our case
+																	studies</a></p>
+
+														</div>
+													</div>
+
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+															<p style="text-align: center;">We work with clients in a
+																wide range of sectors, find out more about the work we
+																do for them and what they say:</p>
+
+														</div>
+													</div>
+													<div class="wpb_column vc_column_container vc_col-sm-12">
+														<div id="product-18483"
+															class="wpb_column vc_column_container vc_col-sm-4"
+															style="padding:0 15px;">
+															<div style="width:33.3%; float:left;" class="quoteIcon">
+																<img width="100" height="100"
+																	src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABNJREFUGBljGAWjYBSMglFAVwAABXgAAdxFAhsAAAAASUVORK5CYII="
+																	class="attachment-full size-full wp-post-image lazyload ewww_webp_lazy_load"
+																	alt="quote" decoding="async"
+																	data-src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																	data-eio-rwidth="100" data-eio-rheight="100"
+																	data-src-webp="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png.webp"><noscript><img
+																		width="100" height="100"
+																		src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																		class="attachment-full size-full wp-post-image"
+																		alt="quote" decoding="async"
+																		data-eio="l" /></noscript>
+															</div>
+															<div style="width:66.6%;float:left;">
+
+																<h5 style="margin-bottom: 0;font-size:17pt;">
+																	Shard Capital </h5>
+																<h5 style="color:#6c63ff;">
+																	Shard Capital </h5>
+
+
+																<p></p>
+																<p>We are really pleased with our DPO from The DPO
+																	Centre, who understood our needs and was able to
+																	translate them into a workable plan that has greatly
+																	assisted our business’s compliance journey.&nbsp;The
+																	DPO Centre’s advice and support has assisted us in
+																	ensuring that our compliance level has remained high
+																	despite the challenges that rapid growth presents.
+																</p>
+																<p></p>
+
+
+															</div>
+														</div>
+
+
+														<div id="product-18482"
+															class="wpb_column vc_column_container vc_col-sm-4"
+															style="padding:0 15px;">
+															<div style="width:33.3%; float:left;" class="quoteIcon">
+																<img width="100" height="100"
+																	src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABNJREFUGBljGAWjYBSMglFAVwAABXgAAdxFAhsAAAAASUVORK5CYII="
+																	class="attachment-full size-full wp-post-image lazyload ewww_webp_lazy_load"
+																	alt="quote" decoding="async"
+																	data-src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																	data-eio-rwidth="100" data-eio-rheight="100"
+																	data-src-webp="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png.webp"><noscript><img
+																		width="100" height="100"
+																		src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																		class="attachment-full size-full wp-post-image"
+																		alt="quote" decoding="async"
+																		data-eio="l" /></noscript>
+															</div>
+															<div style="width:66.6%;float:left;">
+
+																<h5 style="margin-bottom: 0;font-size:17pt;">
+																	Unbar Rothon </h5>
+																<h5 style="color:#6c63ff;">
+																	Unbar Rothon </h5>
+
+
+																<p></p>
+																<p>The DPO Centre’s help in dealing with a particularly
+																	complex DSAR that we received was invaluable. The
+																	support and advice that they provided throughout the
+																	entire process was extremely helpful… Overall,
+																	working with The DPO Centre greatly reduced the
+																	significant challenge of dealing with this DSAR</p>
+																<p></p>
+
+
+															</div>
+														</div>
+
+
+														<div id="product-17433"
+															class="wpb_column vc_column_container vc_col-sm-4"
+															style="padding:0 15px;">
+															<div style="width:33.3%; float:left;" class="quoteIcon">
+																<img width="100" height="100"
+																	src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABNJREFUGBljGAWjYBSMglFAVwAABXgAAdxFAhsAAAAASUVORK5CYII="
+																	class="attachment-full size-full wp-post-image lazyload ewww_webp_lazy_load"
+																	alt="quote" decoding="async"
+																	data-src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																	data-eio-rwidth="100" data-eio-rheight="100"
+																	data-src-webp="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png.webp"><noscript><img
+																		width="100" height="100"
+																		src="https:///wp-content/uploads/2018/12/DPO_quote_100px-1-1.png"
+																		class="attachment-full size-full wp-post-image"
+																		alt="quote" decoding="async"
+																		data-eio="l" /></noscript>
+															</div>
+															<div style="width:66.6%;float:left;">
+
+																<h5 style="margin-bottom: 0;font-size:17pt;">
+																	Professional Case Management </h5>
+																<h5 style="color:#6c63ff;">
+																	Jenifer McIntosh </h5>
+
+
+																<p></p>
+																<p>The DPO I had the pleasure of working with on that
+																	project is one of the best DPO/counsels I have
+																	worked with when it came to thoughtfully negotiating
+																	through a clinical trials-DPA, given his great
+																	working knowledge of the GDPR and the crossover with
+																	clinical trials regulations in both EU &amp; UK.</p>
+																<p></p>
+
+
+															</div>
+														</div>
+
+													</div>
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+
+
+														</div>
+													</div>
+													<div class="vc_empty_space" style="height: 60px"><span
+															class="vc_empty_space_inner"></span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row-full-width vc_clearfix"></div>
+									<div id="scrollToMe" data-vc-full-width="true" data-vc-full-width-init="false"
+										class="vc_row wpb_row vc_row-fluid vc_custom_1618403967637 vc_row-has-fill">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="vc_empty_space" style="height: 32px"><span
+															class="vc_empty_space_inner"></span></div>
+													<div class="wpb_text_column wpb_content_element " id="enquire">
+														<div class="wpb_wrapper">
+															<h3><span style="color: #ffffff;">Enquire Today</span></h3>
+
+														</div>
+													</div>
+
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+															<p><span style="color: #ffffff;">Complete your details below
+																	and a data protection expert will be in touch</span>
+															</p>
+
+														</div>
+													</div>
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner">
+																<div class="wpb_wrapper">
+																	<div class="wpb_raw_code wpb_raw_js">
+																		<div class="wpb_wrapper">
+																			<script charset="utf-8"
+																				type="text/javascript" src="js/shell.js"
+																				data-cookieconsent="necessary"></script>
+																			<script data-cookieconsent="necessary">
+																				hbspt.forms.create({
+																					portalId: "4212265",
+																					formId: "3030e226-8a14-4e92-b44b-82c7ceeb58a5"
+																				});
+																			</script>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row-full-width vc_clearfix"></div>
+									<div data-vc-full-width="true" data-vc-full-width-init="false"
+										class="vc_row wpb_row vc_row-fluid vc_custom_1616496260370 vc_row-has-fill">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div
+														class="wpb_text_column wpb_content_element  vc_custom_1707915809606">
+														<div class="wpb_wrapper">
+															<p style="text-align: center;"><strong><span
+																		style="color: #6c63ff;">Alternatively click one
+																		of the options below to speak to
+																		us</span></strong></p>
+															<p>&nbsp;</p>
+															<p style="text-align: center;"><a class="customBtn"
+																	style="float: none; padding: 15px 25px; color: #000; font-weight: bold;"
+																	href="mailto:hello@dpocentre.com"><i
+																		class="fas fa-envelope"></i> Email</a> <a
+																	class="customBtn"
+																	style="float: none; padding: 15px 25px; color: #000; font-weight: bold;"
+																	href="Tel: 0203 797 1289"><i
+																		class="fa fa-phone fa-fw fa-lg"></i>Call</a></p>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="vc_row-full-width vc_clearfix"></div>
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<div class="wpb_text_column wpb_content_element ">
+														<div class="wpb_wrapper">
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="section section-page-footer">
+						<div class="section_wrapper clearfix">
+
+							<div class="column one page-pager">
+								<div class="mcb-column-inner">
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<!-- mfn_hook_content_after --><!-- mfn_hook_content_after -->
+
+	<footer id="Footer" class="clearfix ">
+
+
+		<div class="widgets_wrapper ">
+			<div class="container">
+				<div class="column one-fourth">
+					<aside id="text-3" class="widget widget_text">
+						<h4>Contact us</h4>
+						<div class="textwidget">
+							<div style="font-size: 14px;">The DPO Centre Ltd<br>
+								<a href="https://what3words.com/posed.hired.curry" target="_blank" rel="noopener"><span
+										style="color: #6c63ff;">London:</span></a> 50 Liverpool Street, London,<br>
+								EC2M 7PR<br>
+								<a href="https://w3w.co/mulls.guarding.piano" target="_blank" rel="noopener"><span
+										style="color: #6c63ff;">Amsterdam:</span></a> Vijzelstraat 68-78, Amsterdam,
+								1017 HL, The Netherlands<br>
+								<a href="https://what3words.com/loud.pretty.juices" target="_blank" rel="noopener"><span
+										style="color: #6c63ff;">Dublin:</span></a> Alexandra House, 3 Ballsbridge Park,
+								Dublin, D04 C7H2, Ireland<br>
+								<a href="https://what3words.com/madder.february.month" target="_blank"
+									rel="noopener"><span style="color: #6c63ff;">Toronto:</span></a> 161 Bay Street,
+								Suite 2700,<br>
+								Toronto, ON, M5J 2S1<br>
+								<a href="https://what3words.com/dots.caves.clubs" target="_blank" rel="noopener"><span
+										style="color: #6c63ff;">Registered Office:</span></a> Suffolk Enterprise Centre,
+								Felaw Street, Ipswich, IP2 8SJ<br>
+								<strong><span style="color: #6c63ff;">Telephone:</span> </strong><a style="color: #fff;"
+									href="tel:+44203 797 1289"> +44 (0) 203 797 1289</a><br>
+								<strong>Company Number:</strong>&nbsp;10874595<br>
+								<strong>VAT:</strong>&nbsp;GB 275694357
+							</div>
+						</div>
+					</aside>
+				</div>
+				<div class="column one-fourth">
+					<aside id="text-4" class="widget widget_text">
+						<h4>Services</h4>
+						<div class="textwidget">
+							<ul class="footerInfo">
+								<li><a href="/services/outsourced-dpo-services/"><span
+											style="font-weight: 400;">Outsourced DPO Services</span></a></li>
+								<li><a href="/sector/data-protection-for-life-sciences/"><span
+											style="font-weight: 400;">Data Protection for Life Sciences</span></a></li>
+								<li><a href="/services/representation-services/"><span style="font-weight: 400;">GDPR
+											Representation</span> </a></li>
+								<li><a href="/services/consultancy-services/"><span style="font-weight: 400;">Data
+											Protection Consultancy</span> </a></li>
+								<li><a href="/services/dsar-response-service/"><span style="font-weight: 400;">DSAR
+											Response Service</span> </a></li>
+								<li><a href="/services/xai/"><span style="font-weight: 400;">AI
+											Explainability</span></a></li>
+								<li><a href="/services/data-protection-awareness-training-development/"><span
+											style="font-weight: 400;">Data Protection Training</span></a></li>
+								<li><a href="/services/advice-line-service/"><span style="font-weight: 400;">Data
+											Protection Advice Line</span></a></li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+				<div class="column one-fourth">
+					<aside id="text-2" class="widget widget_text">
+						<h4>More information</h4>
+						<div class="textwidget">
+							<ul class="footerInfo">
+								<li><a href="https:///contact-us/">Contact us</a></li>
+								<li><a href="/sitemap_index.xml">Sitemap</a></li>
+								<li><a href="https:///privacy-notice/">Privacy Notice</a></li>
+								<li><a href="https:///cookie-notice/">Cookie Notice</a></li>
+							</ul>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+						</div>
+					</aside>
+				</div>
+				<div class="column one-fourth">
+					<aside id="text-6" class="widget widget_text">
+						<h4>Websites</h4>
+						<div class="textwidget">
+							<ul class="footerInfo">
+								<li><img decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGOQAAACgAAGXmq1SAAAAAElFTkSuQmCC"
+										data-src="https:///wp-content/uploads/2022/10/flag_great-britain.png"
+										class="lazyload ewww_webp_lazy_load" data-eio-rwidth="32" data-eio-rheight="32"
+										data-src-webp="https:///wp-content/uploads/2022/10/flag_great-britain.png.webp"><noscript><img
+											decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+											src="https:///wp-content/uploads/2022/10/flag_great-britain.png"
+											data-eio="l" /></noscript><a href="https://">United
+										Kingdom</a></li>
+								<li><img decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGOQAAACgAAGXmq1SAAAAAElFTkSuQmCC"
+										data-src="https:///wp-content/uploads/2022/10/flag_netherlands.png"
+										class="lazyload ewww_webp_lazy_load" data-eio-rwidth="32" data-eio-rheight="32"
+										data-src-webp="https:///wp-content/uploads/2022/10/flag_netherlands.png.webp"><noscript><img
+											decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+											src="https:///wp-content/uploads/2022/10/flag_netherlands.png"
+											data-eio="l" /></noscript><a href="https://www.dpocentre.nl">Netherlands</a>
+								</li>
+								<li><img decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGOQAAACgAAGXmq1SAAAAAElFTkSuQmCC"
+										data-src="https:///wp-content/uploads/2024/06/CanadaFlagIcon.png"
+										class="lazyload ewww_webp_lazy_load" data-eio-rwidth="32" data-eio-rheight="32"
+										data-src-webp="https:///wp-content/uploads/2024/06/CanadaFlagIcon.png.webp"><noscript><img
+											decoding="async" style="width: 16px; height: 12px; margin-right: 10px;"
+											src="https:///wp-content/uploads/2024/06/CanadaFlagIcon.png"
+											data-eio="l" /></noscript><a href="https://www.dpocentre.ca">Canada</a></li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<style>
+			.accred {
+				height: 120px;
+			}
+
+			@media only screen and (max-width: 768px) {
+				.accred {
+					height: 75px;
+				}
+			}
+		</style>
+
+		<div class="footer_copy">
+			<div class="container">
+				<div class="column one" style="text-align: center">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhUAAACWAQMAAABTkehiAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACFJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAADAjQAn2AABYtgm3QAAAABJRU5ErkJggg=="
+						alt="Accredications" class="accred lazyload ewww_webp_lazy_load"
+						data-src="/wp-content/uploads/2024/07/FooterIcons1.png" decoding="async" data-eio-rwidth="533"
+						data-eio-rheight="150"
+						data-src-webp="/wp-content/uploads/2024/07/FooterIcons1.png.webp"><noscript><img
+							src="/wp-content/uploads/2024/07/FooterIcons1.png" alt="Accredications" class="accred"
+							data-eio="l"></noscript><img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApEAAACWAQMAAAC8f0EZAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAOBUMTgAATlTc+kAAAAASUVORK5CYII="
+						alt="Accredications" class="accred lazyload ewww_webp_lazy_load"
+						data-src="/wp-content/uploads/2024/07/FooterIcons2.png" decoding="async" data-eio-rwidth="657"
+						data-eio-rheight="150"
+						data-src-webp="/wp-content/uploads/2024/07/FooterIcons2.png.webp"><noscript><img
+							src="/wp-content/uploads/2024/07/FooterIcons2.png" alt="Accredications" class="accred"
+							data-eio="l"></noscript>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_copy">
+			<div class="container">
+				<div class="column one">
+
+
+					<div class="copyright">
+						© 2024 The DPO Centre. All Rights Reserved. </div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</footer>
+
+	</div>
+
+	<div id="Side_slide" class="right dark" data-width="250" aria-expanded="false" role="banner"
+		aria-label="responsive menu">
+		<div class="close-wrapper"><a href="#" aria-label="menu close icon" class="close"><i
+					class="icon-cancel-fine"></i></a></div>
+		<div class="extras">
+			<div class="extras-wrapper" role="navigation" aria-label="extras menu"><a
+					class="top-bar-right-icon top-bar-right-icon-search icon search" href="#"><svg width="26"
+						viewBox="0 0 26 26" aria-label="search icon">
+						<defs>
+							<style>
+								.path {
+									fill: none;
+									stroke: #000;
+									stroke-miterlimit: 10;
+									stroke-width: 1.5px;
+								}
+							</style>
+						</defs>
+						<circle class="path" cx="11.35" cy="11.35" r="6"></circle>
+						<line class="path" x1="15.59" y1="15.59" x2="20.65" y2="20.65"></line>
+					</svg></a></div>
+		</div>
+		<div class="search-wrapper">
+			<form id="side-form" method="get" action="https:///" role="search"
+				aria-label="side slide search"><input type="text" class="field" name="s"
+					placeholder="Enter your search"><input type="submit" class="display-none" value=""><a class="submit"
+					href="#"><i class="icon-search-fine" aria-label="search submit icon"></i></a></form>
+		</div>
+		<div class="lang-wrapper" role="navigation" aria-label="language menu"></div>
+		<div class="menu_wrapper" role="navigation" aria-label="main menu"></div>
+		<ul class="social" role="navigation" aria-label="social menu">
+			<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/dpo-centre/" title="LinkedIn"
+					aria-label="LinkedIn icon"><i class="icon-linkedin"></i></a></li>
+		</ul>
+	</div>
+	<a id="back_to_top" class="footer_button sticky scroll" href=""><i class="icon-up-open-big"></i></a>
+
+	<!-- mfn_hook_bottom --><!-- mfn_hook_bottom --><!-- Facebook Pixel Code -->
+	<script async="" type="text/plain" data-cookieconsent="Marketing">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '223011122918743');
+  fbq('track', 'PageView');
+</script>
+	<!-- End Facebook Pixel Code -->
+	<script async="" type="text/plain" data-cookieconsent="Marketing">
+_linkedin_partner_id = "1803204";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+	<script type="text/plain" data-cookieconsent="Marketing">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+
+	<script>
+		window.RS_MODULES = window.RS_MODULES || {};
+		window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+		window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+		window.RS_MODULES.defered = true;
+		window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+		window.RS_MODULES.type = 'compiled';
+	</script>
+
+
+	<script type="text/javascript">
+
+		jQuery(document).on('ready', function () {
+
+			jQuery('<style>.hover-icon-box-main:hover { border-left-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.hover-icon-box-main:hover { border-right-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.hover-icon-box-main:hover { border-bottom-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.hover-icon-box-image i { color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.hover-icon-box-main:hover .hover-icon-box-image:before { background-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.hover-icon-box-main:hover .hover-icon-box-image:after { background-color:  !important; }</style>').appendTo('head');
+
+			jQuery('<style>.hover-icon-box-main:hover .hover-icon-box-image i { color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.icon-box-image:before { background-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.icon-box-image:after { background-color:  !important; }</style>').appendTo('head');
+
+			jQuery('<style>.border-class-icon-box:hover { border-left-color: !important; }</style>').appendTo('head');
+			jQuery('<style>.border-class-icon-box:hover { border-right-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.border-class-icon-box:hover { border-bottom-color:  !important; }</style>').appendTo('head');
+
+
+			jQuery('<style>.border-class-icon-box:hover .icon-box-image:before{ background-color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.border-class-icon-box:hover .icon-box-image:after{ background-color:  !important; }</style>').appendTo('head');
+
+			jQuery('<style>.border-class-icon-box:hover .icon-box-image i{ color:  !important; }</style>').appendTo('head');
+
+			jQuery('<style> span.before-after-handle:before { color:  !important; }</style>').appendTo('head');
+			jQuery('<style> span.before-after-handle:after { color:  !important; }</style>').appendTo('head');
+
+
+			jQuery('<style>.creative-social-main:hover { background-color:  !important;  }</style>').appendTo('head');
+			jQuery('<style>.slick-dots li button:before { color:  !important; }</style>').appendTo('head');
+			jQuery('<style>.slick-dots li button:before { border:0 !important; }</style>').appendTo('head');
+
+			jQuery('<style>.slick-dots li button:before { font-size: 14px !important;}</style>').appendTo('head');
+
+
+
+
+		});
+	</script>
+
+
+
+	<script type="text/javascript">
+
+
+		jQuery(document).on('ready', function () {
+			jQuery(".insignia-testimonial-slider").slick({
+
+
+
+
+
+
+
+
+
+
+
+
+
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+
+
+							slidesToShow: 2,
+
+							slidesToScroll: 1,
+
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+
+							slidesToShow: 1,
+
+							slidesToScroll: 1,
+						}
+					}
+				]
+			});
+
+		});
+	</script>
+
+
+	<script>
+
+		jQuery('.example1 .slider-for').slick({
+			fade: false,
+			asNavFor: '.example1 .slider-nav',
+			appendArrows: '.pr_images',
+			prevArrow: '<i class="fa fa-angle-left slick-prev"></i>',
+			nextArrow: '<i class="fa fa-angle-right slick-next"></i>'
+		});
+		jQuery('.example1 .slider-nav').slick({
+
+			asNavFor: '.example1 .slider-for',
+
+
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 2,
+
+						slidesToScroll: 1,
+
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+
+						slidesToScroll: 1,
+
+
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+
+						slidesToScroll: 1,
+					}
+				}
+			],
+			focusOnSelect: true
+		});
+
+
+
+	</script>
+
+	<script type="text/javascript">
+		jQuery(document).on('ready', function () {
+			jQuery(".insignia-carousel-slider").slick({
+
+
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3,
+
+							slidesToScroll: 1,
+
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1,
+
+							slidesToScroll: 1,
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+
+							slidesToScroll: 1,
+						}
+					}
+				]
+			});
+
+		});
+	</script>
+
+
+
+	<script>
+	</script>
+
+
+
+	<script>
+
+		jQuery(document).ready(function ($) {
+			var dragging = false,
+				scrolling = false,
+				resizing = false;
+			var imageComparisonContainers = $('.before-after-image-section');
+			checkPosition(imageComparisonContainers);
+			$(window).on('scroll', function () {
+				if (!scrolling) {
+					scrolling = true;
+					(!window.requestAnimationFrame)
+						? setTimeout(function () { checkPosition(imageComparisonContainers); }, 100)
+						: requestAnimationFrame(function () { checkPosition(imageComparisonContainers); });
+				}
+			});
+			imageComparisonContainers.each(function () {
+				var actual = $(this);
+				drags(actual.find('.before-after-handle'), actual.find('.resize-img'), actual, actual.find('.image-label[data-type="original"]'), actual.find('.image-label[data-type="modified"]'));
+			});
+
+			$(window).on('resize', function () {
+				if (!resizing) {
+					resizing = true;
+					(!window.requestAnimationFrame)
+						? setTimeout(function () { checkLabel(imageComparisonContainers); }, 100)
+						: requestAnimationFrame(function () { checkLabel(imageComparisonContainers); });
+				}
+			});
+
+			function checkPosition(container) {
+				container.each(function () {
+					var actualContainer = $(this);
+					if ($(window).scrollTop() + $(window).height() * 0.5 > actualContainer.offset().top) {
+						actualContainer.addClass('is-visible');
+					}
+				});
+
+				scrolling = false;
+			}
+
+			function checkLabel(container) {
+				container.each(function () {
+					var actual = $(this);
+					updateLabel(actual.find('.image-label[data-type="modified"]'), actual.find('.cd-resize-img'), 'left');
+					updateLabel(actual.find('.image-label[data-type="original"]'), actual.find('.cd-resize-img'), 'right');
+				});
+
+				resizing = false;
+			}
+
+			function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
+				dragElement.on("mousedown vmousedown", function (e) {
+					dragElement.addClass('draggable');
+					resizeElement.addClass('resizable');
+
+					var dragWidth = dragElement.outerWidth(),
+						xPosition = dragElement.offset().left + dragWidth - e.pageX,
+						containerOffset = container.offset().left,
+						containerWidth = container.outerWidth(),
+						minLeft = containerOffset + 10,
+						maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+					dragElement.parents().on("mousemove vmousemove", function (e) {
+						if (!dragging) {
+							dragging = true;
+							(!window.requestAnimationFrame)
+								? setTimeout(function () { animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement); }, 100)
+								: requestAnimationFrame(function () { animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement); });
+						}
+					}).on("mouseup vmouseup", function (e) {
+						dragElement.removeClass('draggable');
+						resizeElement.removeClass('resizable');
+					});
+					e.preventDefault();
+				}).on("mouseup vmouseup", function (e) {
+					dragElement.removeClass('draggable');
+					resizeElement.removeClass('resizable');
+				});
+			}
+
+			function animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement) {
+				var leftValue = e.pageX + xPosition - dragWidth;
+				if (leftValue < minLeft) {
+					leftValue = minLeft;
+				} else if (leftValue > maxLeft) {
+					leftValue = maxLeft;
+				}
+
+				var widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+
+				$('.draggable').css('left', widthValue).on("mouseup vmouseup", function () {
+					$(this).removeClass('draggable');
+					resizeElement.removeClass('resizable');
+				});
+
+				$('.resizable').css('width', widthValue);
+
+				updateLabel(labelResizeElement, resizeElement, 'left');
+				updateLabel(labelContainer, resizeElement, 'right');
+				dragging = false;
+			}
+
+			function updateLabel(label, resizeElement, position) {
+				if (position == 'left') {
+					(label.offset().left + label.outerWidth() < resizeElement.offset().left + resizeElement.outerWidth()) ? label.removeClass('is-hidden') : label.addClass('is-hidden');
+				} else {
+					(label.offset().left > resizeElement.offset().left + resizeElement.outerWidth()) ? label.removeClass('is-hidden') : label.addClass('is-hidden');
+				}
+			}
+		});
+
+
+	</script>
+
+
+
+	<script>
+		(function (body) {
+			'use strict';
+			body.className = body.className.replace(/\btribe-no-js\b/, 'tribe-js');
+		})(document.body);
+	</script>
+	<script> /* <![CDATA[ */var tribe_l10n_datatables = { "aria": { "sort_ascending": ": activate to sort column ascending", "sort_descending": ": activate to sort column descending" }, "length_menu": "Show _MENU_ entries", "empty_table": "No data available in table", "info": "Showing _START_ to _END_ of _TOTAL_ entries", "info_empty": "Showing 0 to 0 of 0 entries", "info_filtered": "(filtered from _MAX_ total entries)", "zero_records": "No matching records found", "search": "Search:", "all_selected_text": "All items on this page were selected. ", "select_all_link": "Select all pages", "clear_selection": "Clear Selection.", "pagination": { "all": "All", "next": "Next", "previous": "Previous" }, "select": { "rows": { "0": "", "_": ": Selected %d rows", "1": ": Selected 1 row" } }, "datepicker": { "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"], "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "monthNamesShort": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "monthNamesMin": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "nextText": "Next", "prevText": "Prev", "currentText": "Today", "closeText": "Done", "today": "Today", "clear": "Clear" } };/* ]]> */ </script>
+	<link rel="stylesheet" id="mfn-post-local-styles-166121728358678-css" href="css/post-16612_1.css" type="text/css"
+		media="all">
+	<link rel="stylesheet" id="rs-plugin-settings-css" href="css/rs6.css" type="text/css" media="all">
+	<style id="rs-plugin-settings-inline-css" type="text/css">
+		#rs-demo-id {}
+	</style>
+	<script type="text/javascript" id="eio-lazy-load-js-before">
+		var eio_lazy_vars = { "exactdn_domain": "", "skip_autoscale": 0, "threshold": 0 };
+	</script>
+	<script type="text/javascript" src="js/lazysizes.min.js" id="eio-lazy-load-js"></script>
+	<script type="text/javascript" id="leadin-script-loader-js-js-extra">
+		/* <![CDATA[ */
+		var leadin_wordpress = { "userRole": "visitor", "pageType": "page", "leadinPluginVersion": "11.1.60" };
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="js/4212265.js" async="" defer="" id="hs-script-loader"></script>
+	<script type="text/javascript" src="js/rbtools.min.js" defer="" async="" id="tp-tools-js"></script>
+	<script type="text/javascript" src="js/rs6.min.js" defer="" async="" id="revmin-js"></script>
+	<script type="text/javascript" src="js/core.min.js" id="jquery-ui-core-js"></script>
+	<script type="text/javascript" src="js/tabs.min.js" id="jquery-ui-tabs-js"></script>
+	<script type="text/javascript" src="js/debouncedresize.min.js" id="mfn-debouncedresize-js"></script>
+	<script type="text/javascript" src="js/magnificpopup.min.js" id="mfn-magnificpopup-js"></script>
+	<script type="text/javascript" src="js/menu.js" id="mfn-menu-js"></script>
+	<script type="text/javascript" src="js/visible.min.js" id="mfn-visible-js"></script>
+	<script type="text/javascript" src="js/animations.min.js" id="mfn-animations-js"></script>
+	<script type="text/javascript" src="js/jplayer.min.js" id="mfn-jplayer-js"></script>
+	<script type="text/javascript" src="js/enllax.min.js" id="mfn-enllax-js"></script>
+	<script type="text/javascript" src="js/translate3d.js" id="mfn-parallax-js"></script>
+	<script type="text/javascript" id="mfn-scripts-js-extra">
+		/* <![CDATA[ */
+		var mfn = { "mobileInit": "1240", "parallax": "translate3d", "responsive": "1", "sidebarSticky": "", "lightbox": { "disable": false, "disableMobile": true, "title": false }, "slider": { "blog": 0, "clients": 0, "offer": 0, "portfolio": 0, "shop": 0, "slider": 0, "testimonials": 0 }, "livesearch": { "minChar": 3, "loadPosts": 10, "translation": { "pages": "Pages", "categories": "Categories", "portfolio": "Portfolio", "post": "Posts", "products": "Products" } }, "accessibility": { "translation": { "headerContainer": "Header container", "toggleSubmenu": "Toggle submenu" } }, "home_url": "", "home_url_lang": "https:\/\/", "site_url": "https:\/\/" };
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="js/scripts.js" id="mfn-scripts-js"></script>
+	<script type="text/javascript" id="mfn-scripts-js-after">
+		jQuery('.sp-logo-carousel-pro-section').delay(1500).fadeIn(1000);
+	</script>
+	<script type="text/javascript" src="js/off-screen.js" id="glossary-off-screen-js"></script>
+	<script type="text/javascript" src="js/mobile-tooltip.js" id="glossary-mobile-tooltip-js-js"></script>
+	<script type="text/javascript" src="js/js_composer_front.min.js" id="wpb_composer_front_js-js"></script>
+	<script
+		type="text/javascript">var to_like_post = { "url": "https:///wp-admin/admin-ajax.php", "nonce": "e53dc73803" }; !function (t) { "use strict"; t(document).ready(function () { t(document).on("click", ".to-post-like:not('.to-post-like-unactive')", function (e) { e.preventDefault(); var o = t(this), n = o.data("post-id"), s = parseInt(o.find(".to-like-count").text()); return o.addClass("heart-pulse"), t.ajax({ type: "post", url: to_like_post.url, data: { nonce: to_like_post.nonce, action: "to_like_post", post_id: n, like_nb: s }, context: o, success: function (e) { e && ((o = t(this)).attr("title", e.title), o.find(".to-like-count").text(e.count), o.removeClass(e.remove_class + " heart-pulse").addClass(e.add_class)) } }), !1 }) }) }(jQuery);</script>
+	<script type="text/javascript">
+		document.addEventListener('wpcf7mailsent', function (event) {
+			if (window.location.pathname == "/contact-us/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'contact-us' })
+			}
+			if (window.location.pathname == "/lp/gdpr/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'gdpr' })
+			}
+			if (window.location.pathname == "/lp/eu-representation/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'representation' })
+			}
+			if (window.location.pathname == "/lp/outsourced-dpos/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'outsourced' })
+
+			} if (window.location.pathname == "/resources/gdpr-toolkit/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'gdpr-toolkit' })
+			}
+			if (window.location.pathname == "/lp/impact-assessments/") {
+				gtag('event', 'Mail Sent', { 'event_category': 'Contact Form 7', 'event_label': 'impact-assessments' })
+			}
+		}, false);
+	</script><a href="javascript: Cookiebot.renew()" class="cookieFloatButton"><i class="fa fa-check-circle"></i>
+		<div class="cookieFloatText">
+			Change your cookie consent
+		</div>
+	</a>
+
+
+	</script src="https:>
+</body>
+
+</html>

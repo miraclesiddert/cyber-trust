@@ -4953,14 +4953,36 @@ ul.wcb-button li {
 		.vc_custom_1548079366211 {
 			padding-top: 0px !important;
 		}
+		.grid1 {
+			border: 5px solid #6c63ff !important;
+			border-radius: 2rem;
+		}
 
+		.grid2 {
+			text-align: center;
+			
+		}
+
+	.gridfaq.open p {
+		display: block;
+	}
+		
+
+		
 		.boxhover:hover {
-			box-shadow: 3px 3px 3px #ccc;
-			border-bottom: 5px solid #6c63ff !important;
+			border: 5px solid #000000 !important;
+			box-shadow: 20px 20px 10px #000000;
+			font-weight: bold;
+
+			
 		}
 
 		.boxhover1:hover {
-			border-bottom: 5px solid #6c63ff !important;
+			background: transparent;
+			border: 4px solid #6c63ff !important;
+			box-shadow: 0 1rem 2rem rgba(8, 75, 189, 0.3);
+			font-weight: bold;
+			
 		}
 
 		.newBtn,
@@ -5055,11 +5077,12 @@ ul.wcb-button li {
 			width: 94%;
 			padding: 15px 3%;
 			float: left;
-			background: #eeeeee url('images/forward-arrow-15.png') no-repeat;
+			background: #eeeeee url('/images/double-forward-arrow.svg') no-repeat;
 			background-position: 95% 50%;
 			color: #000;
 			font-weight: bold;
 			margin-bottom: 15px;
+			border-radius: 30px 0%;
 		}
 
 		.halfItemLeft,

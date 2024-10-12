@@ -7865,6 +7865,8 @@ body.mobile-side-slide {
 	overflow-x: visible;
 }
 
+
+
 #Side_slide {
 	display: block;
 	position: fixed;
@@ -21368,7 +21370,7 @@ body.table-hover:not(.woocommerce-page) table tr:hover td a {
 }
 
 .wpb_content_element.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab.ui-tabs-panel {
-	background-color: #fff
+	background-color: #fff;
 }
 
 .wpb_tour .wpb_tabs_nav a {
@@ -24052,6 +24054,7 @@ html.scrollbar-hidden .mfn-footer-sliding .mfn-footer-tmpl .mfn-builder-content 
 		padding-right: 0 !important;
 	}
 }
+
 
 /* Icon box fix */
 .mfn-menu-item-megamenu .mfn-icon-box {
