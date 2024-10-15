@@ -1,3 +1,7 @@
+.first-header {
+	padding-top: 3%;
+	text-align: center;
+}
 
  .header-plain #Top_bar .menu > li.hover > a, .header-plain #Top_bar .menu > li.current-menu-item > a, .header-plain #Top_bar .menu > li.current_page_item > a, .header-plain #Top_bar a:hover#search_button, .header-plain #Top_bar a:hover#search_button [class^="icon-"]:before, [class*=" icon-"]:before, .header-plain #Top_bar .menu > li.current-menu-parent > a, #Top_bar .menu > li.current-menu-ancestor > a {
     color: #000000;
